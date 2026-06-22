@@ -1,0 +1,9 @@
+{
+	"nodes":[
+		{"id":"5dc8b20308e988eb","x":-380,"y":-660,"width":400,"height":400,"type":"file","file":"Publish/FPT University/Summer 2026/MAS291/Chapter 1/The Role of Statistics in Engineering.md"},
+		{"id":"72815b31bdea697f","x":340,"y":-300,"width":400,"height":400,"type":"file","file":"Publish/FPT University/Summer 2026/MAS291/Chapter 1/Mechanistic Model vs Empirical Model.md"}
+	],
+	"edges":[
+		{"id":"3ce816c4fabc839c","fromNode":"72815b31bdea697f","fromSide":"left","toNode":"5dc8b20308e988eb","toSide":"right"}
+	]
+}
