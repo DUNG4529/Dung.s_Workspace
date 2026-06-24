@@ -1,5 +1,5 @@
 ---
-title: Trang chủ
+title: Home Page
 ---
 # Nguyễn Tiến Dũng
 
@@ -8,7 +8,8 @@ title: Trang chủ
 ## 📓 Ghi chú
 
 - [[FPT University]]
-    
+
+Hello My friend
 
 ---
 
