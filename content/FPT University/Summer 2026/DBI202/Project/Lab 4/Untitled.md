@@ -1,8 +1,0 @@
-1 SINH VIÊN CHO 1 PHIÊN TƯ VẤN 
-PHÂN TÍCH TIẾP CHÙ ĐỀ
-- TÌM HIỂU SÂU -> LÀM SONG CÁI BÀI ĐÚC KẾT KẾT QUA - ĐÚC KẾT HƯỚNG ĐI  
-- 10 CÂU ĐÓ ĐÁP ÁN GÌ ĐÁP ÁN GÌ -> CHỌN ĐÁP ÁN ĐÓ THÌ SẼ RA CÁI CHỦ ĐỀ GÌ
-- ĐÚC KẾT CÁI ĐÓ LÀ CHUYÊN NGÀNH NÀO RỒI MỚI HUYỂN QUA DANH SÁCH CÁC TƯ VẤN CHUYÊN SÂU
-- THIẾU LUỒNG LÀM SAO ĐÊ RPHACN TÁCH ẮNER ĐỂ RECOMMEND CHUYÊN NGÀNH
-đÁNH GIÁ CHƯA ĐỦ RỘNG
-SUY NGHĨ THÊM ĐỂ MỞ RỘNG BUSINEES RULE 
