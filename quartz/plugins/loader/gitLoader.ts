@@ -357,6 +357,57 @@ function linkPeerDependencies(pluginDir: string): void {
   }
 }
 
+function patchObsidianFlavoredMarkdownMermaid(pluginDir: string, name: string): void {
+  if (name !== "obsidian-flavored-markdown") return
+
+  const patches: Array<{
+    file: string
+    replacements: Array<[RegExp, string]>
+  }> = [
+    {
+      file: path.join(pluginDir, "src", "scripts", "mermaid.inline.ts"),
+      replacements: [
+        [
+          /querySelectorAll\("code\.mermaid"\)/g,
+          'querySelectorAll("code.mermaid, code.language-mermaid")',
+        ],
+        [
+          /themeVariables:\s*\{\s*fontFamily: computedStyleMap\["--codeFont"\],\s*primaryColor: computedStyleMap\["--light"\],\s*primaryTextColor: computedStyleMap\["--darkgray"\],\s*primaryBorderColor: computedStyleMap\["--tertiary"\],\s*lineColor: computedStyleMap\["--darkgray"\],\s*secondaryColor: computedStyleMap\["--secondary"\],\s*tertiaryColor: computedStyleMap\["--tertiary"\],\s*clusterBkg: computedStyleMap\["--light"\],\s*edgeLabelBackground: computedStyleMap\["--highlight"\],\s*\}/s,
+          `themeVariables: {\n        fontFamily: computedStyleMap["--codeFont"],\n        primaryColor: darkMode ? "#161618" : "#faf8f8",\n        primaryTextColor: darkMode ? "#ebebec" : "#2b2b2b",\n        primaryBorderColor: darkMode ? "#84a59d" : "#84a59d",\n        lineColor: darkMode ? "#d4d4d4" : "#4e4e4e",\n        secondaryColor: darkMode ? "#7b97aa" : "#284b63",\n        tertiaryColor: darkMode ? "#84a59d" : "#84a59d",\n        clusterBkg: darkMode ? "#161618" : "#faf8f8",\n        edgeLabelBackground: darkMode ? "rgba(143, 159, 169, 0.15)" : "rgba(143, 159, 169, 0.15)",\n      }`,
+        ],
+      ],
+    },
+    {
+      file: path.join(pluginDir, "dist", "index.js"),
+      replacements: [
+        [
+          /querySelectorAll\("code\.mermaid"\)/g,
+          'querySelectorAll("code.mermaid, code.language-mermaid")',
+        ],
+        [
+          /themeVariables:\{fontFamily:r\["--codeFont"\],primaryColor:r\["--light"\],primaryTextColor:r\["--darkgray"\],primaryBorderColor:r\["--tertiary"\],lineColor:r\["--darkgray"\],secondaryColor:r\["--secondary"\],tertiaryColor:r\["--tertiary"\],clusterBkg:r\["--light"\],edgeLabelBackground:r\["--highlight"\]\}/g,
+          'themeVariables:{fontFamily:r["--codeFont"],primaryColor:a?"#161618":"#faf8f8",primaryTextColor:a?"#ebebec":"#2b2b2b",primaryBorderColor:a?"#84a59d":"#84a59d",lineColor:a?"#d4d4d4":"#4e4e4e",secondaryColor:a?"#7b97aa":"#284b63",tertiaryColor:a?"#84a59d":"#84a59d",clusterBkg:a?"#161618":"#faf8f8",edgeLabelBackground:a?"rgba(143, 159, 169, 0.15)":"rgba(143, 159, 169, 0.15)"}',
+        ],
+      ],
+    },
+  ]
+
+  for (const patch of patches) {
+    if (!fs.existsSync(patch.file)) continue
+
+    const original = fs.readFileSync(patch.file, "utf-8")
+    let updated = original
+
+    for (const [pattern, replacement] of patch.replacements) {
+      updated = updated.replace(pattern, replacement)
+    }
+
+    if (updated !== original) {
+      fs.writeFileSync(patch.file, updated)
+    }
+  }
+}
+
 function buildInstalledPlugin(pluginDir: string, name: string, verbose?: boolean): void {
   if (hasPrebuiltDist(pluginDir)) {
     if (verbose) {
@@ -530,6 +581,7 @@ export async function installPlugin(
     execSync(`git clone --depth 1${branchArg} "${spec.repo}" "${pluginDir}"`, { stdio: "pipe" })
   }
 
+  patchObsidianFlavoredMarkdownMermaid(pluginDir, spec.name)
   buildInstalledPlugin(pluginDir, spec.name, options.verbose)
 
   if (options.verbose) {
