@@ -30,6 +30,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Clear Quartz plugin cache
+        run: rm -rf .quartz/plugins
+
       - name: Install Quartz plugins
         run: npx quartz plugin install
 
