@@ -23,12 +23,12 @@ export const DefaultFrame: PageFrame = {
   }: PageFrameProps) {
     return (
       <>
-        <div class="left sidebar">
+        <aside class="left sidebar">
           {left.map((BodyComponent) => (
             <BodyComponent {...componentData} />
           ))}
-        </div>
-        <div class="center">
+        </aside>
+        <main class="center" id="quartz-main">
           <div class="page-header">
             <Header {...componentData}>
               {header.map((HeaderComponent) => (
@@ -48,12 +48,12 @@ export const DefaultFrame: PageFrame = {
               <BodyComponent {...componentData} />
             ))}
           </div>
-        </div>
-        <div class="right sidebar">
+        </main>
+        <aside class="right sidebar">
           {right.map((BodyComponent) => (
             <BodyComponent {...componentData} />
           ))}
-        </div>
+        </aside>
         <Footer {...componentData} />
       </>
     )
