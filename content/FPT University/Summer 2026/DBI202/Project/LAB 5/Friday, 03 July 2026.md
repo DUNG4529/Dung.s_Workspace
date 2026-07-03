@@ -1,41 +1,88 @@
+---
+tags: [HọcTập, DBI202, Deadline, Project, T-SQL]
+---
 
-## Notes
-# DBI202 
-- Ra hội đồng CN - 26/07/2026
-- Thu Project - Cuối tuần 9 (tức sau tuần nghỉ hè)
-- Deadline Lab 5 - 19/07/2026 - Phải có bài để giảng viên mình chấm trước để gửi bài cho giảng viên phản biện $26$ chấm nhưng mà phải nộp bài cho giảng viên phản biện từ $22$  
+# 📚 DBI202 - Tổng hợp thông tin quan trọng
 
-## ![](https://lms-hcm.fpt.edu.vn/theme/image.php/moove/assign/1762834095/monologo?filtericon=1)
+## 🗓️ Các mốc thời gian chính
+- 🏫 **Ra hội đồng CN** - `26/07/2026`
+- 📥 **Thu Project** - Cuối tuần 9 (tức sau tuần nghỉ hè)
+- ⚠️ **Deadline Lab 5** - `19/07/2026`
+  > Phải có bài để giảng viên mình chấm trước để gửi bài cho giảng viên phản biện.  
+  > Giảng viên phản biện chấm từ ngày `26` nhưng giảng viên mình phải chấm xong bài từ `22`.
 
-# [LAB5 _ FINAL][RBL] SUMMER 2026_SE2023_SUBMIT PROJECT GROUP_Deadline 19/7/2026 23:59
+---
 
-LƯU Ý THÀNH PHẦN NỘP BÀI LAB 5 + FINAL  
+## 🧩 LAB5 _ FINAL - Project Group
+### 🔗 [Link LMS - LAB5 _ FINAL][RBL] SUMMER 2026_SE2023_SUBMIT PROJECT GROUP_Deadline 19/7/2026 23:59
+![[LMS_Icon.png]]
 
-TUYỆT ĐỐI TUÂN THỦ DEADLINE NỘP BÀI - GIAI ĐOẠN NÀY LÀ GIAI ĐOẠN FINAL
-THÀNH PHẦN NỘP GỒM:  
-1. File report (gồm report lẻ là yêu cầu của lab5 và REPORT TỔNG THỂ TỪ 1 ĐẾN 5 (FINAL) )  
-2. SLIDE THUYẾT TRÌNH (Nội dung tổng từ 1 đến 5 bài lab -> FINAL)  
-	1. Giới thiệu TV nhóm
-	2. GT đề tài
-	3. Mô tả user requirement (bảng tổng thể)
-		1. Giới thiệu đề tài 
-	4. đi vào sơ đồ erd
-	5. bung ra danh sách relation model
-		1. (cắt hình T-SQL đưa lên slide luôn điều được) 
-	6. giới thiệu 1 vài chức năng của project (1 vài tính năng giả lập bằng T-SQL)
-3. SOURCE CODE -> FULL DATABASE HOÀN CHỈNH
-	1. File Sql sever tạo databses
-	2. file insert data
-	3. file code tính năng
+> [!warning] LƯU Ý THÀNH PHẦN NỘP BÀI LAB 5 + FINAL
+> - **TUYỆT ĐỐI TUÂN THỦ DEADLINE NỘP BÀI** - GIAI ĐOẠN NÀY LÀ GIAI ĐOẠN FINAL
 
+### ✅ Thành phần nộp gồm:
+- [ ] **1. File report**
+  - Report lẻ (yêu cầu Lab 5)
+  - **REPORT TỔNG THỂ** từ bài 1 đến bài 5 (FINAL)
+- [ ] **2. SLIDE THUYẾT TRÌNH** (Nội dung tổng từ 1 đến 5 -> FINAL)
+  - Giới thiệu TV nhóm
+  - GT đề tài
+  - Mô tả user requirement (bảng tổng thể)
+    - Giới thiệu đề tài
+  - Sơ đồ ERD
+  - Relation model (kèm hình T-SQL trên slide)
+  - Giới thiệu 1 vài chức năng của project (giả lập bằng T-SQL)
+- [ ] **3. SOURCE CODE -> FULL DATABASE HOÀN CHỈNH**
+  - File SQL Server tạo database
+  - File insert data
+  - File code tính năng
 
+---
+
+## 📎 Tài liệu đính kèm
 ![[Friday, 03 July 2026-20260703073352768.docx]]
 
-# Deadline Audit log (bài cá nhân)
-## SUMMER 2026_ SE2023_ SUBMIT AI AUDIT LOG _ DEADLINE 19/7/2026 23:59
-- NỘP FILE AI AUDIT LOG  FULL BÀI TỪ LAB 1 -> 5:
+---
 
-- ĐÂY LÀ BÀI CÁ NHÂN
-# Lưu ý trước khi nghỉ hè
+## 🤖 Deadline Audit log (bài cá nhân)
+### 🔗 [SUMMER 2026_ SE2023_ SUBMIT AI AUDIT LOG _ DEADLINE 19/7/2026 23:59](https://lms-hcm.fpt.edu.vn/...)
 
-# T- SQL 
+> [!important] ĐÂY LÀ BÀI CÁ NHÂN
+- Nộp file AI Audit Log **FULL BÀI TỪ LAB 1 -> 5**
+
+---
+
+## 📝 ĐỀ THI
+- 10 câu -> 10 file SQL riêng biệt
+- ⛔ **KHÔNG ĐƯỢC SỬ DỤNG TỪ KHÓA [GO]**
+
+---
+
+## 📖 Kiến thức T-SQL đã học ngày hôm nay
+![[T-SQL.sql]]
+
+---
+
+## 🧠 Bài Tập T-SQL
+### ⏳ Deadline: `SUMMER2026_SE2023_EXERCISE STORE PROCEDURE - 7/7/2026 23:59`
+
+> [!info] CÁC CÂU HỎI
+> **Câu 1:** Viết Store Procedure với tham số vào là Tuổi, Giới tính. Lấy ra thông tin những nhân viên tương ứng.
+> 
+> **Câu 2:** Viết Store Procedure với tham số vào là MADD, MAPHG. Lấy ra thông tin những dự án tương ứng.
+> 
+> **Câu 3:** Viết Store Procedure với tham số vào là Địa chỉ, tham số ra là Tổng số lương nhân viên đang sống tại địa chỉ đó.
+> 
+> **Câu 4:** Viết Store Procedure với tham số vào là MANV, tham số ra là Tổng số giờ mà nhân viên đó đã tham gia tất cả dự án.
+> 
+> **Câu 5:** Viết Store Procedure với tham số vào là Tên NV, tính tổng số lượng dự án mà nhân viên đó đã tham gia.
+> 
+> **Câu 6:** Viết Store Procedure với tham số vào là TENDD, tính tổng số lượng dự án triển khai tại địa điểm đó.
+> 
+> **Câu 7:** Viết Store Procedure với tham số vào là Tên người giám sát, tính tổng số lượng nhân viên chịu sự giám sát của tên người giám sát đó.
+> 
+> **Câu 8:** Viết Store Procedure với tham số vào là Tên người giám sát, lấy ra thông tin những nhân viên chịu sự giám sát của tên người giám sát đó.
+> 
+> **Câu 9:** Viết Store Procedure với tham số vào là MANV, TENNV, lấy ra thông tin người giám sát của nhân viên đó.
+> 
+> **Câu 10:** Viết Store Procedure với tham số vào là Tuổi, tham số ra là Tổng số lượng người giám sát >= tuổi.
