@@ -15,7 +15,6 @@ tags: [HọcTập, DBI202, Deadline, Project, T-SQL]
 
 ## 🧩 LAB5 _ FINAL - Project Group
 ### 🔗 [Link LMS - LAB5 _ FINAL][RBL] SUMMER 2026_SE2023_SUBMIT PROJECT GROUP_Deadline 19/7/2026 23:59
-![[LMS_Icon.png]]
 
 > [!warning] LƯU Ý THÀNH PHẦN NỘP BÀI LAB 5 + FINAL
 > - **TUYỆT ĐỐI TUÂN THỦ DEADLINE NỘP BÀI** - GIAI ĐOẠN NÀY LÀ GIAI ĐOẠN FINAL
