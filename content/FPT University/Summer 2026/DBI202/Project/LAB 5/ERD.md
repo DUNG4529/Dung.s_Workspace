@@ -8,7 +8,7 @@ Dưới đây là tổng hợp chi tiết toàn bộ các lỗ hổng (loopholes
 - **Lỗ hổng 2: Thiết kế bảng `QUESTION` thiếu linh hoạt.**
     - **Vấn đề:** Bạn gán Khóa ngoại `ProgramID` cứng vào bảng `QUESTION`.
     - **Thực tế:** Việc này giới hạn một câu hỏi chỉ có thể dùng để đánh giá điểm cho đúng 1 chuyên ngành duy nhất. Trong thực tế hướng nghiệp, một câu hỏi (ví dụ: "Bạn có thích tính toán không?") có thể giúp định hướng và cộng điểm cho rất nhiều ngành khác nhau. Thiết kế chuẩn ở Lab 3 và Lab 4 của nhóm hoàn toàn không có `ProgramID` trong bảng `Question`.
-
+ 
 ### 2. Nhóm Lỗ hổng về Kiến thức Thiết kế Cơ sở dữ liệu (BCNF)
 
 - **Lỗ hổng 3: Sai kiến thức lý thuyết cơ bản về ERD và BCNF.**
