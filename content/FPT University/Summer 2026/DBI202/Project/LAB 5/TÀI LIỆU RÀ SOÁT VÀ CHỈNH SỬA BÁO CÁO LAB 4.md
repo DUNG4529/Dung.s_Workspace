@@ -1,63 +1,154 @@
 
+# 📌 PHÂN TÍCH 5 LỖI SAI CHÍ MẠNG - CSDL HỆ THỐNG KIOSK TƯ VẤN HƯỚNG NGHIỆP
 
-#### PHẦN 1: CÁC LỖ HỔNG VỀ NGHIỆP VỤ (BUSINESS LOGIC)
-
-**1. Sai lệch hoàn toàn định hướng dự án (Fatal Error)**
-
-- **Lỗ hổng:** Tài liệu đang gọi hệ thống là _"Hệ thống Thi đánh giá năng lực & Xét tuyển tự động"_, đồng thời có cột `IsAdmitted` (Đậu/Trượt Đại học).
-- **Giải thích cho nhóm:** Đề bài dự án số 5 của chúng ta là "Career Guidance Kiosk System... at FPT University Open Day" (Hệ thống Kiosk Tư vấn Hướng nghiệp). Một chiếc Kiosk cho học sinh cấp 3 đứng bấm trong 10 phút ở sự kiện Open Day chỉ có thể đưa ra **Gợi ý ngành học (Recommendation)** dựa trên sở thích, chứ không có thẩm quyền ra quyết định tuyển sinh (Đậu/Rớt). Nếu giữ nguyên, giảng viên sẽ đánh trượt vì sai phạm vi (scope).
-- **Cách sửa:**
-    - Đổi tên toàn bộ thành: _"Hệ thống Kiosk Khảo sát và Gợi ý Ngành học"_.
-    - Xóa bỏ cột `IsAdmitted`. Chỉ giữ lại cột `MatchScore` (Độ phù hợp, tính theo thang 0-100%).
-
-**2. Gắn cứng Khóa ngoại `ProgramID` vào bảng `QUESTION`**
-
-- **Lỗ hổng:** Nhóm đang để `ProgramID` làm Foreign Key (FK) trong bảng `QUESTION` hoặc thiết lập quan hệ `N:1` giữa `ANSWER_OPTION` và `ACADEMIC_PROGRAM`.
-- **Giải thích cho nhóm:** Thiết kế này nghĩa là 1 câu hỏi/1 đáp án chỉ được dùng để xét điểm cho đúng 1 chuyên ngành duy nhất. Trong thực tế, một đáp án (ví dụ: "Thích Toán") có thể cộng điểm cho rất nhiều ngành khác nhau (CNTT, Tài chính, Kỹ thuật). Thiết kế N:1 làm hệ thống bị "cứng", không thể mở rộng.
-- **Cách sửa:** Xóa FK `ProgramID` khỏi `QUESTION`. Quan hệ giữa Lựa chọn đáp án và Ngành học phải là **Nhiều-Nhiều (M:N)**. Hệ thống cần một bảng/thực thể kết hợp trung gian (Ví dụ: `PROGRAM_MATCHING_RULE`) để lưu trữ ma trận điểm: 1 Đáp án nối với nhiều Ngành học, mỗi nối kết có một `CompatibilityScore` (Trọng số điểm).
-
-#### PHẦN 2: CÁC LỖ HỔNG VỀ THIẾT KẾ ERD & CHUẨN HÓA (DATABASE THEORY)
-
-**3. Nhầm lẫn trầm trọng giữa ERD và BCNF**
-
-- **Lỗ hổng:** Trong báo cáo ghi _"Sơ đồ ERD được thiết kế theo chuẩn BCNF"_.
-- **Giải thích cho nhóm:** Sai kiến thức nền tảng DBI202. Sơ đồ ERD (Entity-Relationship Diagram) là mô hình thiết kế khái niệm (Conceptual Design), chỉ dùng để xác định thực thể và quan hệ. Dạng chuẩn BCNF (Boyce-Codd Normal Form) chỉ được áp dụng để chuẩn hóa Lược đồ quan hệ (Relational Schema / Lược đồ Logic) thông qua quá trình phân rã bảng (Decomposition) dựa trên các Phụ thuộc hàm (Functional Dependencies).
-- **Cách sửa:** Sửa văn phong thành: _"Lược đồ quan hệ của hệ thống được chuẩn hóa đạt dạng chuẩn BCNF"_. Khi giảng viên hỏi tại sao đạt BCNF, phải trả lời: _"Vì mọi phụ thuộc hàm không tầm thường đều có vế trái là một siêu khóa (superkey)"_.
-
-**4. Giải thích sai về Dị thường (Anomalies) ở bảng Lịch sử trả lời**
-
-- **Lỗ hổng:** Giải thích _"Chỉ lưu OptionID thay vì Text để thiết kế đạt chuẩn BCNF"_.
-- **Giải thích cho nhóm:** Việc thay chuỗi Text bằng ID không tạo ra BCNF. Việc này nhằm mục đích loại bỏ **Dị thường cập nhật (Update Anomaly)** và sai sót khi người dùng nhập liệu. BCNF được tạo ra nhờ việc tách các phụ thuộc hàm vi phạm ra thành các bảng riêng.
-- **Cách sửa:** Thuyết trình lại là: _"Việc lưu OptionID thay cho Text giúp triệt tiêu Dị thường cập nhật (Update Anomaly) và đảm bảo tính nhất quán dữ liệu"_.
-
-**5. Sự "dị dạng" của thực thể STUDENT_RESPONSE trên ERD**
-
-- **Lỗ hổng:** Trên ERD, nhóm vẽ thực thể số 7 là `STUDENT_RESPONSE` có các thuộc tính `TotalScore, Rank`, và cho thực thể này đi `Recommends` (Gợi ý) ngành học.
-- **Giải thích cho nhóm:** `TotalScore` (Điểm tổng/Độ phù hợp) và `Rank` là kết quả đánh giá của **cả một phiên tương tác (Session)**, chứ không phải của một **câu trả lời đơn lẻ (Response)**. Việc cho 1 câu trả lời đơn lẻ đi "gợi ý ngành học" là sai logic luồng dữ liệu.
-- **Cách sửa:**
-    - Chuyển các thuộc tính `MatchScore`, `Rank` ra khỏi `STUDENT_RESPONSE`.
-    - Mối quan hệ `Recommends` phải nối giữa `KIOSK_SESSION` (Phiên làm việc) và `ACADEMIC_PROGRAM` (Ngành học).
-
-#### PHẦN 3: CÁC LỖ HỔNG VỀ THUẬT TOÁN & KỸ THUẬT SQL
-
-**6. Xung đột hệ quản trị cơ sở dữ liệu (Syntax Error)**
-
-- **Lỗ hổng:** Trong Data Flow, kịch bản dùng hàm `GETDATE()` nhưng lại đi kèm với cú pháp `ON DUPLICATE KEY UPDATE / UPSERT`.
-- **Giải thích cho nhóm:** `GETDATE()` là hàm lấy thời gian hệ thống của MS SQL Server. Nhưng `ON DUPLICATE KEY UPDATE` lại là cú pháp đặc sản của hệ quản trị MySQL. Nếu mang đoạn code này chạy trên SQL Server (hệ quản trị môn học yêu cầu), hệ thống sẽ báo lỗi cú pháp (Syntax Error) ngay lập tức.
-- **Cách sửa:** Đổi lại thuật toán cập nhật đáp án theo chuẩn SQL Server: Dùng lệnh `MERGE` hoặc cấu trúc `IF EXISTS ... UPDATE ... ELSE INSERT ...`. _(Nhắn dev sửa lại đoạn lệnh lưu vết thành: Nếu tồn tại SessionID và QuestionID đó rồi thì UPDATE OptionID mới, ngược lại thì INSERT)._
-
-**7. Lỗi sai Toán học khi tính điểm gợi ý bằng hàm SUM**
-
-- **Lỗ hổng:** Kịch bản 2 tính điểm bằng công thức: `SUM(PercentRight)/100 AS TotalScore`.
-- **Giải thích cho nhóm:** Nếu dùng hàm `SUM` (Tổng), thuật toán sẽ bị sập logic. Ví dụ: Ngành CNTT cấu hình 5 câu hỏi liên quan, học sinh trả lời đúng hết -> `SUM` = 500. Ngành Thiết kế có 15 câu, học sinh đúng hết -> `SUM` = 1500. Thang điểm bị lệch hoàn toàn, ngành nào có nhiều câu hỏi gắn vào hơn sẽ luôn có điểm cao hơn một cách vô lý.
-- **Cách sửa:** Phải sử dụng hàm trung bình **`AVG(CompatibilityScore)`** (có thể nhóm theo ProgramID bằng `GROUP BY`). Hàm `AVG` đảm bảo điểm độ phù hợp luôn nằm chuẩn ở thang 0% - 100%, bất chấp số lượng câu hỏi.
-
-**8. Lỗi sập hệ thống khi chọn nhiều đáp án (Checkbox)**
-
-- **Lỗ hổng:** Nếu `STUDENT_RESPONSE` thiết kế Khóa chính (PK) là `(SessionID, QuestionID)`.
-- **Giải thích cho nhóm:** Nếu form khảo sát có câu hỏi dạng Checkbox (Ví dụ: Câu 5: Bạn có kỹ năng nào? Chọn A và B). Khi dev đẩy cả A và B xuống database cùng lúc cho `QuestionID = 5`, hệ thống sẽ văng lỗi **Primary Key Violation** (Trùng khóa chính) vì một cặp `(SessionID, QuestionID)` chỉ được tồn tại 1 lần.
-- **Cách sửa:**
-    - Đổi khóa chính của bảng `STUDENT_RESPONSE` thành `(SessionID, OptionID)`.
-    - Vì 1 `OptionID` là duy nhất và đã thuộc về 1 `QuestionID` nằm ở bảng `ANSWER_OPTION`, nên việc lưu `(SessionID, OptionID)` vừa hỗ trợ chọn nhiều đáp án, vừa thỏa mãn chuẩn BCNF (không bị dư thừa `QuestionID`).
+> [!info] BỐI CẢNH
+> Dựa trên yêu cầu dự án **"Career Guidance Kiosk System"** và các kiến thức chuẩn về Hệ quản trị MS SQL Server + Thiết kế CSDL (DBI202)
 
 ---
+
+## 1️⃣ LỖI NGHIỆP VỤ: ĐI SAI HƯỚNG DỰ ÁN
+
+### ❌ Lỗi ở đâu
+- Nhóm sử dụng cụm từ **"Hệ thống Xét tuyển tự động"**
+- Gán cờ `IsAdmitted` (Đậu/Trượt) cho học sinh dựa trên điểm số
+- Ví dụ: `TotalScore >= 8 THEN IsAdmitted = 1`
+
+### 🧠 Lý do lỗi
+- Đề tài số 5 của các bạn là **Kiosk Tư vấn Hướng nghiệp tại sự kiện Open Day**
+- Một chiếc máy Kiosk cho học sinh cấp 3 đứng bấm 10 phút chỉ có chức năng tạo ra các **điểm số gợi ý (recommendation scores)** dựa trên câu trả lời để phân tích độ phù hợp
+- Nó hoàn toàn **không có chức năng hay thẩm quyền** quyết định "xét tuyển đậu đại học"
+- Việc làm này sai lệch hoàn toàn ngữ cảnh thực tế
+
+### ✅ Cách sửa
+- **Xóa bỏ** hoàn toàn cột `IsAdmitted` và tư duy "Đậu/Trượt"
+- Thay vào đó, sử dụng khái niệm **Độ phù hợp/tương thích (`MatchScore`)**
+- Tính theo thang phần trăm (0 - 100%) để đưa ra Top các ngành học gợi ý cho học sinh
+
+---
+
+## 2️⃣ LỖI THUẬT TOÁN: SAI CÔNG THỨC TÍNH ĐIỂM
+
+### ❌ Lỗi ở đâu
+- Trong Data Flow, Lập trình viên đang dùng lệnh:
+```sql
+SUM(PercentRight)/100 AS TotalScore
+```
+
+### 🧠 Lý do lỗi
+- Nếu dùng hàm tổng (`SUM`), thang điểm sẽ bị lệch hoàn toàn
+- **Ví dụ minh họa:**
+	- Ngành Kỹ thuật Phần mềm có 5 câu hỏi liên quan, học sinh trả lời đúng hết 5 câu → Tổng là 500%
+	- Ngành Đồ họa có 15 câu, đúng hết → Tổng là 1500%
+- Ngành nào được cấu hình nhiều câu hỏi hơn sẽ mặc định có điểm cao hơn một cách vô lý
+
+### ✅ Cách sửa
+- Bắt buộc phải thay hàm `SUM` bằng hàm trung bình **`AVG(CompatibilityScore)`**
+- Hàm AVG sẽ luôn đảm bảo điểm độ phù hợp (MatchScore) nằm chuẩn ở thang 0% - 100%
+- Bất chấp chuyên ngành đó có bao nhiêu câu hỏi
+
+---
+
+## 3️⃣ LỖI KỸ THUẬT CSDL: XUNG ĐỘT CÚ PHÁP SQL
+
+### ❌ Lỗi ở đâu
+- Kịch bản Backend sử dụng hàm `GETDATE()` đi kèm với lệnh `ON DUPLICATE KEY UPDATE` (hoặc `UPSERT`)
+
+### 🧠 Lý do lỗi
+- Môn học yêu cầu sử dụng hệ quản trị **MS SQL Server**
+- Hàm `GETDATE()` đúng là của MS SQL Server ✅
+- **NHƯNG** cú pháp `ON DUPLICATE KEY UPDATE` lại là "đặc sản" của hệ quản trị MySQL ❌
+- Nếu mang đoạn code này chạy trên SQL Server, chương trình sẽ báo lỗi cú pháp (Syntax Error) ngay lập tức
+
+### ✅ Cách sửa
+- Để giải quyết bài toán "nếu có đáp án rồi thì Cập nhật, nếu chưa có thì Thêm mới"
+- Trong MS SQL Server bạn phải dùng câu lệnh điều kiện:
+
+```sql
+IF EXISTS (SELECT 1 FROM Table WHERE Condition)
+    UPDATE ...
+ELSE
+    INSERT ...
+```
+
+> [!tip] Gợi ý
+> Nhóm có thể dễ dàng viết cái này vào một **Stored Procedure** cho Lab 5
+
+---
+
+## 4️⃣ LỖI SẬP HỆ THỐNG: KHÓA CHÍNH BỊ TRÙNG (VI PHẠM BCNF)
+
+### ❌ Lỗi ở đâu
+- Bảng `STUDENT_RESPONSE` (Lịch sử trả lời) đang được thiết kế Khóa chính (Primary Key) là:
+```sql
+PRIMARY KEY (SessionID, QuestionID)
+```
+
+### 🧠 Lý do lỗi
+- Thiết kế này sẽ làm sập hệ thống nếu bài khảo sát có câu hỏi dạng **chọn nhiều đáp án (Checkbox)**
+- **Ví dụ thực tế:**
+	- _Câu 5 hỏi "Sở thích của bạn?", học sinh chọn cả A và B_
+	- Khi Backend đẩy hai đáp án A và B xuống Database cho cùng một `QuestionID = 5` trong cùng một `Session`
+	- SQL Server sẽ báo lỗi **Primary Key Violation** (Trùng khóa chính)
+	- Vì một cặp `(SessionID, QuestionID)` chỉ được xuất hiện 1 lần duy nhất
+- Hơn nữa, việc lưu `QuestionID` khi đã có `OptionID` là **vi phạm dạng chuẩn BCNF**
+
+### ✅ Cách sửa
+- Đổi khóa chính của bảng `STUDENT_RESPONSE` thành:
+```sql
+PRIMARY KEY (SessionID, OptionID)
+```
+- Vì mỗi `OptionID` (ví dụ: Option 23 là đáp án A của câu 5) là duy nhất
+- Thiết kế này vừa cho phép học sinh chọn nhiều đáp án cùng lúc, vừa không bị trùng khóa, lại đạt chuẩn BCNF tuyệt đối
+
+---
+
+## 5️⃣ LỖI THIẾT KẾ: ĐIỂM SỐ BỊ GẮN CỨNG (THIẾU LINH HOẠT)
+
+### ❌ Lỗi ở đâu
+- Cột `PercentRight` (Điểm số) đang được đặt cứng bên trong bảng `ANSWER_OPTION`
+
+### 🧠 Lý do lỗi
+- Trong hướng nghiệp, một câu trả lời không thể mang một số điểm cố định cho tất cả các ngành
+- **Ví dụ thực tế:**
+	- Đáp án _"Tôi thích làm việc với con số"_ sẽ mang lại 100% điểm phù hợp cho ngành Tài chính
+	- Nhưng chỉ mang lại 10% điểm cho ngành Thiết kế Đồ họa
+- Việc gắn chết 1 mức điểm vào bảng đáp án khiến hệ thống không thể phân loại ngành học
+
+### ✅ Cách sửa
+1. **Xóa** cột điểm khỏi bảng `ANSWER_OPTION`
+2. **Tạo** một bảng ma trận trung gian:
+
+```sql
+CREATE TABLE PROGRAM_MATCHING_RULE (
+    OptionID INT,
+    ProgramID INT,
+    CompatibilityScore DECIMAL(5,2),  -- Trọng số điểm
+    PRIMARY KEY (OptionID, ProgramID),
+    FOREIGN KEY (OptionID) REFERENCES ANSWER_OPTION(OptionID),
+    FOREIGN KEY (ProgramID) REFERENCES PROGRAM(ProgramID)
+);
+```
+
+3. Tư vấn viên sẽ tự do cấu hình:
+	- Option A nối với Ngành B → được 100 điểm
+	- Option A nối với Ngành C → được 10 điểm
+
+---
+
+## 🌟 TỔNG KẾT TỔNG THỂ
+
+> [!summary] NHẬN XÉT CHUNG
+> Nhóm bạn đã có tư duy logic rất tốt:
+> - ✅ Nghĩ đến việc lưu `OptionID` thay vì Text
+> - ✅ Nghĩ đến việc chống rác dữ liệu bằng Audit Trail
+>
+> **Tuy nhiên**, vì chưa nắm rõ bản chất nghiệp vụ Hướng nghiệp (nghĩ nhầm sang hệ thống Thi Đại Học) nên các bảng và công thức toán học bị kéo đi sai hướng.
+
+---
+
+## 🎯 BỨC TRANH HỆ THỐNG SAU KHI SỬA
+
+![[TÀI LIỆU RÀ SOÁT VÀ CHỈNH SỬA BÁO CÁO LAB 4-20260704215535439.png]]
+
+---
+
