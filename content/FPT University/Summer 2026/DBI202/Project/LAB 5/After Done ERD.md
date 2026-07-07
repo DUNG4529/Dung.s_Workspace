@@ -21,7 +21,7 @@ Lab 5 yêu cầu khối lượng code SQL rất lớn và đa dạng: Queries, F
 **Bước 1: Khởi tạo Database và Nhập Dummy Data (Dữ liệu giả)**
 
 - Chạy toàn bộ script `CREATE TABLE` của Lab 4.
-- **Việc cấp bách:** Nhóm phải dùng lệnh `INSERT INTO` để tạo sẵn một lượng dữ liệu mẫu hợp lý (khoảng 5-10 dòng mỗi bảng). Nếu không có dữ liệu, các bạn không thể test được các câu Queries hay Procedures ở các bước sau có chạy đúng logic hay không.
+- **Việc cấp bách:** Nhóm phải dùng lệnh `INSERT INTO` để tạo sẵn một lượng dữ liệu mẫu hợp lý (15 data dòng mỗi bảng). Nếu không có dữ liệu, các bạn không thể test được các câu Queries hay Procedures ở các bước sau có chạy đúng logic hay không.
 
 **Bước 2: Giải quyết KPI về Truy vấn (Queries - Nhóm Dev 1)** Trong lúc một phần nhóm làm code logic, hãy giao cho 1-2 bạn xử lý toàn bộ yêu cầu về truy vấn:
 
