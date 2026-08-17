@@ -137,7 +137,7 @@ erDiagram
         date DoB "Ngày sinh"
         string ClassID FK "Mã lớp"
     }
-    CLASS {
+    CLASSROOM {
         string ClassID PK "Mã lớp"
         string ClassName "Tên lớp"
         string DepartmentID FK "Mã khoa"
@@ -158,8 +158,8 @@ erDiagram
     }
     STUDENT ||--o{ ENROLLMENT : "đăng ký"
     COURSE ||--o{ ENROLLMENT : "được đăng ký"
-    STUDENT }o--|| CLASS : "thuộc"
-    CLASS }o--|| DEPARTMENT : "thuộc"
+    STUDENT }o--|| CLASSROOM : "thuộc"
+    CLASSROOM }o--|| DEPARTMENT : "thuộc"
 ```
 
 Các em thấy rằng các bảng không đứng riêng lẻ mà liên kết qua các đường mũi tên nhờ khóa chính – khóa ngoại. Đó chính là sức mạnh của “quan hệ”.

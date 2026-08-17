@@ -1,651 +1,455 @@
-<!-- ═══════════════════════════════════════════════════ -->
-<!-- COMPLETE SET: 20 QUESTIONS (LESSON 2)             -->
-<!-- INTERFACE: ENGLISH  |  CONTENT: JAPANESE + ROMAJI -->
-<!-- ═══════════════════════════════════════════════════ -->
 
-<h1 style="margin-top: 0; border-bottom: 2px solid var(--background-modifier-border); padding-bottom: 10px;">📘 Lesson 2 – Full Quiz (20 Questions)</h1>
 
-<p style="color: var(--text-muted); font-style: italic;">💡 Each question shows the prompt and choices. Click the <strong>orange</strong> button below each to reveal the answer, Romaji, and explanation.</p>
+**ÔN TẬP CHƯƠNG 2 – TOÀN BỘ 61 CÂU HỎI**
 
-<!-- ========================================================== -->
-<!--                        CÂU 1                                -->
-<!-- ========================================================== -->
-<article style="margin-top: 28px; padding: 16px 20px; background: var(--background-secondary); border-radius: var(--radius-m); border: 1px solid var(--background-modifier-border);">
-    <header style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--interactive-accent); padding-bottom: 6px; margin-bottom: 12px;">
-        <h3 style="margin: 0; color: var(--interactive-accent);">📝 Question 1</h3>
-        <span style="font-size: 0.8em; background: var(--background-modifier-border); padding: 2px 10px; border-radius: 20px;">Particle</span>
-    </header>
-    <section>
-        <p><strong>Prompt:</strong><br>
-        <code style="background: var(--background-primary); padding: 4px 8px; border-radius: 4px;">______    ______    ______      ___★___   じゃありません。</code></p>
-        <p><strong>Choices:</strong></p>
-        <ul style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 24px; margin: 8px 0 0 0;">
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">a. これ</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">b. は</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">c. の</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">d. わたし</li>
-        </ul>
-    </section>
-    <footer style="margin-top: 16px;">
-        <details style="padding: 10px 14px; background: var(--background-primary); border-radius: var(--radius-m); border: 1px solid var(--background-modifier-border);">
-            <summary style="font-weight: bold; color: var(--interactive-accent); cursor: pointer;">✅ Reveal Answer + Romaji</summary>
-            <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--background-modifier-border);">
-                <p><strong>Answer:</strong> <code style="background: var(--background-secondary); padding: 2px 6px; border-radius: 4px;">c. の</code></p>
-                <p><strong>Romaji:</strong> <em>no</em></p>
-                <p><strong>Explanation:</strong> Complete sentence: <em>これはわたしのじゃありません。</em> (Kore wa watashi no ja arimasen.) – The possessive particle の links “watashi” to the implied noun.</p>
-            </div>
-        </details>
-    </footer>
-</article>
+---
 
-<!-- ========================================================== -->
-<!--                        CÂU 2                                -->
-<!-- ========================================================== -->
-<article style="margin-top: 28px; padding: 16px 20px; background: var(--background-secondary); border-radius: var(--radius-m); border: 1px solid var(--background-modifier-border);">
-    <header style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--interactive-accent); padding-bottom: 6px; margin-bottom: 12px;">
-        <h3 style="margin: 0; color: var(--interactive-accent);">📝 Question 2</h3>
-        <span style="font-size: 0.8em; background: var(--background-modifier-border); padding: 2px 10px; border-radius: 20px;">Reading</span>
-    </header>
-    <section>
-        <p><strong>Prompt:</strong><br>
-        Choose the correct Hiragana reading for the <strong>bold</strong> word: <br>
-        <code style="background: var(--background-primary); padding: 4px 8px; border-radius: 4px;">たまご　を　<strong>十</strong>　ください</code></p>
-        <p><strong>Choices:</strong></p>
-        <ul style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 24px; margin: 8px 0 0 0;">
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">a. とお</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">b. とおつ</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">c. じゅう</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">d. しゅう</li>
-        </ul>
-    </section>
-    <footer style="margin-top: 16px;">
-        <details style="padding: 10px 14px; background: var(--background-primary); border-radius: var(--radius-m); border: 1px solid var(--background-modifier-border);">
-            <summary style="font-weight: bold; color: var(--interactive-accent); cursor: pointer;">✅ Reveal Answer + Romaji</summary>
-            <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--background-modifier-border);">
-                <p><strong>Answer:</strong> <code style="background: var(--background-secondary); padding: 2px 6px; border-radius: 4px;">c. じゅう</code></p>
-                <p><strong>Romaji:</strong> <em>juu</em></p>
-                <p><strong>Explanation:</strong> “10 eggs” → たまごを<strong>十</strong>ください (Tamago o <strong>juu</strong> kudasai).</p>
-            </div>
-        </details>
-    </footer>
-</article>
+**Câu 1:**  
+`______    ______    ______      ___★___   じゃありません。`  
+**Lựa chọn:** a. これ  b. は  c. の  d. わたし  
+**Đáp án:** c. の (no) – trợ từ sở hữu.
 
-<!-- ========================================================== -->
-<!--                        CÂU 3                                -->
-<!-- ========================================================== -->
-<article style="margin-top: 28px; padding: 16px 20px; background: var(--background-secondary); border-radius: var(--radius-m); border: 1px solid var(--background-modifier-border);">
-    <header style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--interactive-accent); padding-bottom: 6px; margin-bottom: 12px;">
-        <h3 style="margin: 0; color: var(--interactive-accent);">📝 Question 3</h3>
-        <span style="font-size: 0.8em; background: var(--background-modifier-border); padding: 2px 10px; border-radius: 20px;">Dialogue fill-in</span>
-    </header>
-    <section>
-        <p><strong>Prompt:</strong><br>
-        Fill in ①, ②, ③ in the dialogue:</p>
-        <div style="background: var(--background-primary); padding: 12px 16px; border-radius: var(--radius-m); font-family: monospace;">
-        てんいん：いらっしゃいませ。<br>
-        きゃく：　ニコニコ　本やですか。<br>
-        てんいん：はい、そうです。<br>
-        きゃく：（➀　　　　）、じしょは　どこですか。<br>
-        てんいん：（②　　　　）。あちらです。<br>
-        きゃく：ああ、（③　　　　）。
-        </div>
-    </section>
-    <footer style="margin-top: 16px;">
-        <details style="padding: 10px 14px; background: var(--background-primary); border-radius: var(--radius-m); border: 1px solid var(--background-modifier-border);">
-            <summary style="font-weight: bold; color: var(--interactive-accent); cursor: pointer;">✅ Reveal Answer + Romaji</summary>
-            <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--background-modifier-border);">
-                <p><strong>Answers:</strong></p>
-                <ul>
-                    <li>➀ <strong>すみません</strong> → <em>sumimasen</em> (Excuse me)</li>
-                    <li>② <strong>じしょですか？</strong> → <em>jisho desu ka?</em> (A dictionary?)</li>
-                    <li>③ <strong>ありがとうございます。</strong> → <em>arigatou gozaimasu.</em> (Thank you.)</li>
-                </ul>
-            </div>
-        </details>
-    </footer>
-</article>
+---
 
-<!-- ========================================================== -->
-<!--                        CÂU 4                                -->
-<!-- ========================================================== -->
-<article style="margin-top: 28px; padding: 16px 20px; background: var(--background-secondary); border-radius: var(--radius-m); border: 1px solid var(--background-modifier-border);">
-    <header style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--interactive-accent); padding-bottom: 6px; margin-bottom: 12px;">
-        <h3 style="margin: 0; color: var(--interactive-accent);">📝 Question 4</h3>
-        <span style="font-size: 0.8em; background: var(--background-modifier-border); padding: 2px 10px; border-radius: 20px;">Particle</span>
-    </header>
-    <section>
-        <p><strong>Prompt:</strong><br>
-        <code style="background: var(--background-primary); padding: 4px 8px; border-radius: 4px;">このTシャツ　は　100円です。そのTシャツ（　　　）100円です。</code></p>
-        <p><strong>Choices:</strong></p>
-        <ul style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 24px; margin: 8px 0 0 0;">
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">a. を</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">b. と</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">c. で</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">d. の</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">e. も</li>
-        </ul>
-    </section>
-    <footer style="margin-top: 16px;">
-        <details style="padding: 10px 14px; background: var(--background-primary); border-radius: var(--radius-m); border: 1px solid var(--background-modifier-border);">
-            <summary style="font-weight: bold; color: var(--interactive-accent); cursor: pointer;">✅ Reveal Answer + Romaji</summary>
-            <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--background-modifier-border);">
-                <p><strong>Answer:</strong> <code style="background: var(--background-secondary); padding: 2px 6px; border-radius: 4px;">e. も</code></p>
-                <p><strong>Romaji:</strong> <em>mo</em></p>
-                <p><strong>Explanation:</strong> “That T-shirt is <strong>also</strong> 100 yen.” – も means “also / too”.</p>
-            </div>
-        </details>
-    </footer>
-</article>
+**Câu 2:**  
+Chọn cách đọc Hiragana đúng của từ được **in đậm**: `たまご　を　**十**　ください`  
+**Lựa chọn:** a. とお  b. とおつ  c. じゅう  d. しゅう  
+**Đáp án:** c. じゅう (juu) – "10".
 
-<!-- ========================================================== -->
-<!--                        CÂU 5                                -->
-<!-- ========================================================== -->
-<article style="margin-top: 28px; padding: 16px 20px; background: var(--background-secondary); border-radius: var(--radius-m); border: 1px solid var(--background-modifier-border);">
-    <header style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--interactive-accent); padding-bottom: 6px; margin-bottom: 12px;">
-        <h3 style="margin: 0; color: var(--interactive-accent);">📝 Question 5</h3>
-        <span style="font-size: 0.8em; background: var(--background-modifier-border); padding: 2px 10px; border-radius: 20px;">Question word</span>
-    </header>
-    <section>
-        <p><strong>Prompt:</strong><br>
-        <code style="background: var(--background-primary); padding: 4px 8px; border-radius: 4px;">A：サカイでんき　は　（　　　）ですか。 B：こちらです。</code></p>
-        <p><strong>Choices:</strong></p>
-        <ul style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 24px; margin: 8px 0 0 0;">
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">a. どこ</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">b. だれ</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">c. なん</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">d. なんかい</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">e. どちら</li>
-        </ul>
-    </section>
-    <footer style="margin-top: 16px;">
-        <details style="padding: 10px 14px; background: var(--background-primary); border-radius: var(--radius-m); border: 1px solid var(--background-modifier-border);">
-            <summary style="font-weight: bold; color: var(--interactive-accent); cursor: pointer;">✅ Reveal Answer + Romaji</summary>
-            <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--background-modifier-border);">
-                <p><strong>Answer:</strong> <code style="background: var(--background-secondary); padding: 2px 6px; border-radius: 4px;">e. どちら</code></p>
-                <p><strong>Romaji:</strong> <em>dochira</em></p>
-                <p><strong>Explanation:</strong> Polite way to ask “where” (more formal than どこ). Answer こちら = “this way / here”.</p>
-            </div>
-        </details>
-    </footer>
-</article>
+---
 
-<!-- ========================================================== -->
-<!--                        CÂU 6                                -->
-<!-- ========================================================== -->
-<article style="margin-top: 28px; padding: 16px 20px; background: var(--background-secondary); border-radius: var(--radius-m); border: 1px solid var(--background-modifier-border);">
-    <header style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--interactive-accent); padding-bottom: 6px; margin-bottom: 12px;">
-        <h3 style="margin: 0; color: var(--interactive-accent);">📝 Question 6</h3>
-        <span style="font-size: 0.8em; background: var(--background-modifier-border); padding: 2px 10px; border-radius: 20px;">Listening</span>
-    </header>
-    <section>
-        <p><strong>Prompt:</strong><br>
-        Listen and choose Tanaka’s phone number:<br>
-        <code style="background: var(--background-primary); padding: 4px 8px; border-radius: 4px;">たなかさん　の　でんわ ばんごう は　なんばん ですか。</code></p>
-        <p><strong>Choices:</strong></p>
-        <ul style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 24px; margin: 8px 0 0 0;">
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">a. 03 5275 2725</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">b. 03 5257 2725</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">c. 03 5275 2752</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">d. 03 5725 7252</li>
-        </ul>
-    </section>
-    <footer style="margin-top: 16px;">
-        <details style="padding: 10px 14px; background: var(--background-primary); border-radius: var(--radius-m); border: 1px solid var(--background-modifier-border);">
-            <summary style="font-weight: bold; color: var(--interactive-accent); cursor: pointer;">✅ Reveal Answer + Romaji</summary>
-            <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--background-modifier-border);">
-                <p><strong>Answer:</strong> <em>(Depends on audio – not determinable from text)</em></p>
-                <p><strong>Romaji prompt:</strong> <em>Tanaka-san no denwa bangou wa nan-ban desu ka?</em></p>
-                <p><strong>Note:</strong> Listen carefully to the audio file to pick the correct number.</p>
-            </div>
-        </details>
-    </footer>
-</article>
+**Câu 3:**  
+Điền từ vào ①, ②, ③ trong đoạn hội thoại:  
+てんいん：いらっしゃいませ。  
+きゃく:　 ニコニコ　本やですか。  
+てんいん：はい、そうです。  
+きゃく：（➀　　　　）、じしょは　どこですか。  
+てんいん：（②　　　　）。あちらです。  
+きゃく：ああ、（③　　　　）。  
+**Đáp án:** ➀ すみません (sumimasen) / ② じしょですか？ (jisho desu ka?) / ③ ありがとうございます。 (arigatou gozaimasu.)
 
-<!-- ========================================================== -->
-<!--                        CÂU 7                                -->
-<!-- ========================================================== -->
-<article style="margin-top: 28px; padding: 16px 20px; background: var(--background-secondary); border-radius: var(--radius-m); border: 1px solid var(--background-modifier-border);">
-    <header style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--interactive-accent); padding-bottom: 6px; margin-bottom: 12px;">
-        <h3 style="margin: 0; color: var(--interactive-accent);">📝 Question 7</h3>
-        <span style="font-size: 0.8em; background: var(--background-modifier-border); padding: 2px 10px; border-radius: 20px;">Number reading</span>
-    </header>
-    <section>
-        <p><strong>Prompt:</strong><br>
-        Choose the correct numeral for the Kanji: <strong>二十一万六千四百</strong></p>
-        <p><strong>Choices:</strong></p>
-        <ul style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 24px; margin: 8px 0 0 0;">
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">a. 216400</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">b. 21640</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">c. 2164000</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">d. 2164</li>
-        </ul>
-    </section>
-    <footer style="margin-top: 16px;">
-        <details style="padding: 10px 14px; background: var(--background-primary); border-radius: var(--radius-m); border: 1px solid var(--background-modifier-border);">
-            <summary style="font-weight: bold; color: var(--interactive-accent); cursor: pointer;">✅ Reveal Answer + Romaji</summary>
-            <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--background-modifier-border);">
-                <p><strong>Answer:</strong> <code style="background: var(--background-secondary); padding: 2px 6px; border-radius: 4px;">a. 216400</code></p>
-                <p><strong>Romaji reading:</strong> <em>nijuuichiman rokusen yonhyaku</em></p>
-                <p><strong>Explanation:</strong> 21万 (210,000) + 6千 (6,000) + 4百 (400) = 216,400.</p>
-            </div>
-        </details>
-    </footer>
-</article>
+---
 
-<!-- ========================================================== -->
-<!--                        CÂU 8                                -->
-<!-- ========================================================== -->
-<article style="margin-top: 28px; padding: 16px 20px; background: var(--background-secondary); border-radius: var(--radius-m); border: 1px solid var(--background-modifier-border);">
-    <header style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--interactive-accent); padding-bottom: 6px; margin-bottom: 12px;">
-        <h3 style="margin: 0; color: var(--interactive-accent);">📝 Question 8</h3>
-        <span style="font-size: 0.8em; background: var(--background-modifier-border); padding: 2px 10px; border-radius: 20px;">Odd one out</span>
-    </header>
-    <section>
-        <p><strong>Prompt:</strong><br>
-        <code style="background: var(--background-primary); padding: 4px 8px; border-radius: 4px;">（　　　　）は　にく　の　りょうり</code><br>
-        Choose the <strong>unsuitable</strong> word (not a meat dish).</p>
-        <p><strong>Choices:</strong></p>
-        <ul style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 24px; margin: 8px 0 0 0;">
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">a. ハンバーグ</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">b. おやこどん</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">c. とんかつ</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">d. 100円ショップ</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">e. やさい</li>
-        </ul>
-    </section>
-    <footer style="margin-top: 16px;">
-        <details style="padding: 10px 14px; background: var(--background-primary); border-radius: var(--radius-m); border: 1px solid var(--background-modifier-border);">
-            <summary style="font-weight: bold; color: var(--interactive-accent); cursor: pointer;">✅ Reveal Answer + Romaji</summary>
-            <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--background-modifier-border);">
-                <p><strong>Answer:</strong> <code style="background: var(--background-secondary); padding: 2px 6px; border-radius: 4px;">d. 100円ショップ</code></p>
-                <p><strong>Romaji:</strong> <em>hyaku-en shoppu</em> (100-yen shop)</p>
-                <p><strong>Explanation:</strong> All others are meat/food dishes (hamburg steak, oyakodon, tonkatsu, vegetables). A shop is not a dish.</p>
-            </div>
-        </details>
-    </footer>
-</article>
+**Câu 4:**  
+`このTシャツ　は　100円です。そのTシャツ（　　　）100円です。`  
+**Lựa chọn:** a. を  b. と  c. で  d. の  e. も  
+**Đáp án:** e. も (mo) – "cũng".
 
-<!-- ========================================================== -->
-<!--                        CÂU 9                                -->
-<!-- ========================================================== -->
-<article style="margin-top: 28px; padding: 16px 20px; background: var(--background-secondary); border-radius: var(--radius-m); border: 1px solid var(--background-modifier-border);">
-    <header style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--interactive-accent); padding-bottom: 6px; margin-bottom: 12px;">
-        <h3 style="margin: 0; color: var(--interactive-accent);">📝 Question 9</h3>
-        <span style="font-size: 0.8em; background: var(--background-modifier-border); padding: 2px 10px; border-radius: 20px;">Question word</span>
-    </header>
-    <section>
-        <p><strong>Prompt:</strong><br>
-        <code style="background: var(--background-primary); padding: 4px 8px; border-radius: 4px;">あれは（　　　）の　本ですか。…すもうの本です。</code></p>
-        <p><strong>Choices:</strong></p>
-        <ul style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 24px; margin: 8px 0 0 0;">
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">a. だれ</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">b. どちら</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">c. いくら</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">d. どこ</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">e. なん</li>
-        </ul>
-    </section>
-    <footer style="margin-top: 16px;">
-        <details style="padding: 10px 14px; background: var(--background-primary); border-radius: var(--radius-m); border: 1px solid var(--background-modifier-border);">
-            <summary style="font-weight: bold; color: var(--interactive-accent); cursor: pointer;">✅ Reveal Answer + Romaji</summary>
-            <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--background-modifier-border);">
-                <p><strong>Answer:</strong> <code style="background: var(--background-secondary); padding: 2px 6px; border-radius: 4px;">e. なん</code></p>
-                <p><strong>Romaji:</strong> <em>nan</em></p>
-                <p><strong>Explanation:</strong> Asking “What kind of book?” → あれは<strong>なん</strong>の本ですか。 (Are wa <strong>nan</strong> no hon desu ka?) Answer: Sumo book.</p>
-            </div>
-        </details>
-    </footer>
-</article>
+---
 
-<!-- ========================================================== -->
-<!--                        CÂU 10                               -->
-<!-- ========================================================== -->
-<article style="margin-top: 28px; padding: 16px 20px; background: var(--background-secondary); border-radius: var(--radius-m); border: 1px solid var(--background-modifier-border);">
-    <header style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--interactive-accent); padding-bottom: 6px; margin-bottom: 12px;">
-        <h3 style="margin: 0; color: var(--interactive-accent);">📝 Question 10</h3>
-        <span style="font-size: 0.8em; background: var(--background-modifier-border); padding: 2px 10px; border-radius: 20px;">Number reading</span>
-    </header>
-    <section>
-        <p><strong>Prompt:</strong><br>
-        Choose the correct numeral for the Kanji: <strong>二万百五</strong></p>
-        <p><strong>Choices:</strong></p>
-        <ul style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 24px; margin: 8px 0 0 0;">
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">a. 21050</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">b. 2105</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">c. 20105</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">d. 2150</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">e. 20150</li>
-        </ul>
-    </section>
-    <footer style="margin-top: 16px;">
-        <details style="padding: 10px 14px; background: var(--background-primary); border-radius: var(--radius-m); border: 1px solid var(--background-modifier-border);">
-            <summary style="font-weight: bold; color: var(--interactive-accent); cursor: pointer;">✅ Reveal Answer + Romaji</summary>
-            <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--background-modifier-border);">
-                <p><strong>Answer:</strong> <code style="background: var(--background-secondary); padding: 2px 6px; border-radius: 4px;">c. 20105</code></p>
-                <p><strong>Romaji reading:</strong> <em>niman hyakugo</em></p>
-                <p><strong>Explanation:</strong> 2万 (20,000) + 百 (100) + 五 (5) = 20,105.</p>
-            </div>
-        </details>
-    </footer>
-</article>
+**Câu 5:**  
+`A：サカイでんき　は　（　　　）ですか。　B：こちらです。`  
+**Lựa chọn:** a. どこ  b. だれ  c. なん  d. なんかい  e. どちら  
+**Đáp án:** e. どちら (dochira) – hỏi vị trí lịch sự.
 
-<!-- ========================================================== -->
-<!--                        CÂU 11                               -->
-<!-- ========================================================== -->
-<article style="margin-top: 28px; padding: 16px 20px; background: var(--background-secondary); border-radius: var(--radius-m); border: 1px solid var(--background-modifier-border);">
-    <header style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--interactive-accent); padding-bottom: 6px; margin-bottom: 12px;">
-        <h3 style="margin: 0; color: var(--interactive-accent);">📝 Question 11</h3>
-        <span style="font-size: 0.8em; background: var(--background-modifier-border); padding: 2px 10px; border-radius: 20px;">Possessive</span>
-    </header>
-    <section>
-        <p><strong>Prompt:</strong><br>
-        <code style="background: var(--background-primary); padding: 4px 8px; border-radius: 4px;">私（　　　）ズボンは　このズボンです。</code></p>
-        <p><strong>Choices:</strong></p>
-        <ul style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 24px; margin: 8px 0 0 0;">
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">a. で</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">b. と</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">c. の</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">d. を</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">e. も</li>
-        </ul>
-    </section>
-    <footer style="margin-top: 16px;">
-        <details style="padding: 10px 14px; background: var(--background-primary); border-radius: var(--radius-m); border: 1px solid var(--background-modifier-border);">
-            <summary style="font-weight: bold; color: var(--interactive-accent); cursor: pointer;">✅ Reveal Answer + Romaji</summary>
-            <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--background-modifier-border);">
-                <p><strong>Answer:</strong> <code style="background: var(--background-secondary); padding: 2px 6px; border-radius: 4px;">c. の</code></p>
-                <p><strong>Romaji:</strong> <em>no</em></p>
-                <p><strong>Explanation:</strong> “My pants” → 私<strong>の</strong>ズボン (Watashi <strong>no</strong> zubon).</p>
-            </div>
-        </details>
-    </footer>
-</article>
+---
 
-<!-- ========================================================== -->
-<!--                        CÂU 12                               -->
-<!-- ========================================================== -->
-<article style="margin-top: 28px; padding: 16px 20px; background: var(--background-secondary); border-radius: var(--radius-m); border: 1px solid var(--background-modifier-border);">
-    <header style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--interactive-accent); padding-bottom: 6px; margin-bottom: 12px;">
-        <h3 style="margin: 0; color: var(--interactive-accent);">📝 Question 12</h3>
-        <span style="font-size: 0.8em; background: var(--background-modifier-border); padding: 2px 10px; border-radius: 20px;">Word order</span>
-    </header>
-    <section>
-        <p><strong>Prompt:</strong><br>
-        <code style="background: var(--background-primary); padding: 4px 8px; border-radius: 4px;">______    ______   ___★___  ______   ______     です。</code></p>
-        <p><strong>Choices:</strong></p>
-        <ul style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 24px; margin: 8px 0 0 0;">
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">a. は</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">b. パソコン</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">c. これ</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">d. たなかさん</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">e. の</li>
-        </ul>
-    </section>
-    <footer style="margin-top: 16px;">
-        <details style="padding: 10px 14px; background: var(--background-primary); border-radius: var(--radius-m); border: 1px solid var(--background-modifier-border);">
-            <summary style="font-weight: bold; color: var(--interactive-accent); cursor: pointer;">✅ Reveal Answer + Romaji</summary>
-            <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--background-modifier-border);">
-                <p><strong>Answer:</strong> <code style="background: var(--background-secondary); padding: 2px 6px; border-radius: 4px;">d. たなかさん</code></p>
-                <p><strong>Romaji:</strong> <em>Tanaka-san</em></p>
-                <p><strong>Explanation:</strong> Correct order: <code>これ は たなかさん の パソコン です。</code> The ★ marks the 3rd word → <strong>たなかさん</strong>.</p>
-            </div>
-        </details>
-    </footer>
-</article>
+**Câu 6:**  
+Nghe và chọn số điện thoại của Tanaka:  
+`たなかさん　の　でんわ ばんごう は　なんばん ですか。`  
+**Lựa chọn:** a. 03 5275 2725  b. 03 5257 2725  c. 03 5275 2752  d. 03 5725 7252  
+**Đáp án:** (phụ thuộc vào file audio – nghe và chọn).
 
-<!-- ========================================================== -->
-<!--                        CÂU 13                               -->
-<!-- ========================================================== -->
-<article style="margin-top: 28px; padding: 16px 20px; background: var(--background-secondary); border-radius: var(--radius-m); border: 1px solid var(--background-modifier-border);">
-    <header style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--interactive-accent); padding-bottom: 6px; margin-bottom: 12px;">
-        <h3 style="margin: 0; color: var(--interactive-accent);">📝 Question 13</h3>
-        <span style="font-size: 0.8em; background: var(--background-modifier-border); padding: 2px 10px; border-radius: 20px;">Reading</span>
-    </header>
-    <section>
-        <p><strong>Prompt:</strong><br>
-        Choose the correct reading for: <strong>lầu 10</strong> (10th floor)</p>
-        <p><strong>Choices:</strong></p>
-        <ul style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 24px; margin: 8px 0 0 0;">
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">a. じゅうかい</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">b. じゅっかい</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">c. じゅうか</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">d. とおかい</li>
-        </ul>
-    </section>
-    <footer style="margin-top: 16px;">
-        <details style="padding: 10px 14px; background: var(--background-primary); border-radius: var(--radius-m); border: 1px solid var(--background-modifier-border);">
-            <summary style="font-weight: bold; color: var(--interactive-accent); cursor: pointer;">✅ Reveal Answer + Romaji</summary>
-            <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--background-modifier-border);">
-                <p><strong>Answer:</strong> <code style="background: var(--background-secondary); padding: 2px 6px; border-radius: 4px;">b. じゅっかい</code></p>
-                <p><strong>Romaji:</strong> <em>jukkai</em></p>
-                <p><strong>Explanation:</strong> The 10th floor is read as <strong>じゅっかい</strong> (sound change from じゅうかい).</p>
-            </div>
-        </details>
-    </footer>
-</article>
+---
 
-<!-- ========================================================== -->
-<!--                        CÂU 14                               -->
-<!-- ========================================================== -->
-<article style="margin-top: 28px; padding: 16px 20px; background: var(--background-secondary); border-radius: var(--radius-m); border: 1px solid var(--background-modifier-border);">
-    <header style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--interactive-accent); padding-bottom: 6px; margin-bottom: 12px;">
-        <h3 style="margin: 0; color: var(--interactive-accent);">📝 Question 14</h3>
-        <span style="font-size: 0.8em; background: var(--background-modifier-border); padding: 2px 10px; border-radius: 20px;">Listing particle</span>
-    </header>
-    <section>
-        <p><strong>Prompt:</strong><br>
-        <code style="background: var(--background-primary); padding: 4px 8px; border-radius: 4px;">A：おやこどんを3つ　（　　　　）　ビールを１つ　ください。 B：はい。</code></p>
-        <p><strong>Choices:</strong></p>
-        <ul style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 24px; margin: 8px 0 0 0;">
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">a. を</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">b. の</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">c. と</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">d. で</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">e. も</li>
-        </ul>
-    </section>
-    <footer style="margin-top: 16px;">
-        <details style="padding: 10px 14px; background: var(--background-primary); border-radius: var(--radius-m); border: 1px solid var(--background-modifier-border);">
-            <summary style="font-weight: bold; color: var(--interactive-accent); cursor: pointer;">✅ Reveal Answer + Romaji</summary>
-            <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--background-modifier-border);">
-                <p><strong>Answer:</strong> <code style="background: var(--background-secondary); padding: 2px 6px; border-radius: 4px;">c. と</code></p>
-                <p><strong>Romaji:</strong> <em>to</em></p>
-                <p><strong>Explanation:</strong> Listing two items (oyakodon and beer) → particle <strong>と</strong> means “and”.</p>
-            </div>
-        </details>
-    </footer>
-</article>
+**Câu 7:**  
+Chọn số đúng cho Kanji: **二十一万六千四百**  
+**Lựa chọn:** a. 216400  b. 21640  c. 2164000  d. 2164  
+**Đáp án:** a. 216400
 
-<!-- ========================================================== -->
-<!--                        CÂU 15                               -->
-<!-- ========================================================== -->
-<article style="margin-top: 28px; padding: 16px 20px; background: var(--background-secondary); border-radius: var(--radius-m); border: 1px solid var(--background-modifier-border);">
-    <header style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--interactive-accent); padding-bottom: 6px; margin-bottom: 12px;">
-        <h3 style="margin: 0; color: var(--interactive-accent);">📝 Question 15</h3>
-        <span style="font-size: 0.8em; background: var(--background-modifier-border); padding: 2px 10px; border-radius: 20px;">Question word</span>
-    </header>
-    <section>
-        <p><strong>Prompt:</strong><br>
-        <code style="background: var(--background-primary); padding: 4px 8px; border-radius: 4px;">Ａ：これは(            )の けいたいでんわ ですか。 Ｂ：日本の けいたいでんわです</code></p>
-        <p><strong>Choices:</strong></p>
-        <ul style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 24px; margin: 8px 0 0 0;">
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">a. なんの</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">b. どれ</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">c. だれ</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">d. どこ</li>
-        </ul>
-    </section>
-    <footer style="margin-top: 16px;">
-        <details style="padding: 10px 14px; background: var(--background-primary); border-radius: var(--radius-m); border: 1px solid var(--background-modifier-border);">
-            <summary style="font-weight: bold; color: var(--interactive-accent); cursor: pointer;">✅ Reveal Answer + Romaji</summary>
-            <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--background-modifier-border);">
-                <p><strong>Answer:</strong> <code style="background: var(--background-secondary); padding: 2px 6px; border-radius: 4px;">d. どこ</code></p>
-                <p><strong>Romaji:</strong> <em>doko</em></p>
-                <p><strong>Explanation:</strong> Asking “which country’s mobile phone?” → <strong>どこ</strong> の けいたいでんわ (Doko no keitai denwa).</p>
-            </div>
-        </details>
-    </footer>
-</article>
+---
 
-<!-- ========================================================== -->
-<!--                        CÂU 16                               -->
-<!-- ========================================================== -->
-<article style="margin-top: 28px; padding: 16px 20px; background: var(--background-secondary); border-radius: var(--radius-m); border: 1px solid var(--background-modifier-border);">
-    <header style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--interactive-accent); padding-bottom: 6px; margin-bottom: 12px;">
-        <h3 style="margin: 0; color: var(--interactive-accent);">📝 Question 16</h3>
-        <span style="font-size: 0.8em; background: var(--background-modifier-border); padding: 2px 10px; border-radius: 20px;">Word order</span>
-    </header>
-    <section>
-        <p><strong>Prompt:</strong><br>
-        <code style="background: var(--background-primary); padding: 4px 8px; border-radius: 4px;">______    ______    ______   ______   ___★___   のです。</code></p>
-        <p><strong>Choices:</strong></p>
-        <ul style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 24px; margin: 8px 0 0 0;">
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">a. ナタポンさん</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">b. とけい</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">c. 日本</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">d. は</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">e. の</li>
-        </ul>
-    </section>
-    <footer style="margin-top: 16px;">
-        <details style="padding: 10px 14px; background: var(--background-primary); border-radius: var(--radius-m); border: 1px solid var(--background-modifier-border);">
-            <summary style="font-weight: bold; color: var(--interactive-accent); cursor: pointer;">✅ Reveal Answer + Romaji</summary>
-            <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--background-modifier-border);">
-                <p><strong>Answer:</strong> <code style="background: var(--background-secondary); padding: 2px 6px; border-radius: 4px;">c. 日本</code></p>
-                <p><strong>Romaji:</strong> <em>Nihon</em></p>
-                <p><strong>Explanation:</strong> Correct order: <code>ナタポンさん の とけい は 日本 の です。</code> The ★ marks the 5th word → <strong>日本</strong>.</p>
-            </div>
-        </details>
-    </footer>
-</article>
+**Câu 8:**  
+`（　　　　）は　にく　の　りょうり` – Chọn từ không phù hợp.  
+**Lựa chọn:** a. ハンバーグ  b. おやこどん  c. とんかつ  d. 100円ショップ  e. やさい  
+**Đáp án:** d. 100円ショップ (không phải món thịt).
 
-<!-- ========================================================== -->
-<!--                        CÂU 17                               -->
-<!-- ========================================================== -->
-<article style="margin-top: 28px; padding: 16px 20px; background: var(--background-secondary); border-radius: var(--radius-m); border: 1px solid var(--background-modifier-border);">
-    <header style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--interactive-accent); padding-bottom: 6px; margin-bottom: 12px;">
-        <h3 style="margin: 0; color: var(--interactive-accent);">📝 Question 17</h3>
-        <span style="font-size: 0.8em; background: var(--background-modifier-border); padding: 2px 10px; border-radius: 20px;">Kanji writing</span>
-    </header>
-    <section>
-        <p><strong>Prompt:</strong><br>
-        Choose the correct Kanji for the <strong>bold</strong> word: <br>
-        <code style="background: var(--background-primary); padding: 4px 8px; border-radius: 4px;">•りんご　を　<strong>みっつ</strong>　ください</code></p>
-        <p><strong>Choices:</strong></p>
-        <ul style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 24px; margin: 8px 0 0 0;">
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">a. 三っつ</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">b. 五つ</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">c. 三つ</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">d. 四つ</li>
-        </ul>
-    </section>
-    <footer style="margin-top: 16px;">
-        <details style="padding: 10px 14px; background: var(--background-primary); border-radius: var(--radius-m); border: 1px solid var(--background-modifier-border);">
-            <summary style="font-weight: bold; color: var(--interactive-accent); cursor: pointer;">✅ Reveal Answer + Romaji</summary>
-            <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--background-modifier-border);">
-                <p><strong>Answer:</strong> <code style="background: var(--background-secondary); padding: 2px 6px; border-radius: 4px;">c. 三つ</code></p>
-                <p><strong>Romaji:</strong> <em>mittsu</em></p>
-                <p><strong>Explanation:</strong> “3 items” is <strong>三つ</strong> (without a small っ after 三).</p>
-            </div>
-        </details>
-    </footer>
-</article>
+---
 
-<!-- ========================================================== -->
-<!--                        CÂU 18                               -->
-<!-- ========================================================== -->
-<article style="margin-top: 28px; padding: 16px 20px; background: var(--background-secondary); border-radius: var(--radius-m); border: 1px solid var(--background-modifier-border);">
-    <header style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--interactive-accent); padding-bottom: 6px; margin-bottom: 12px;">
-        <h3 style="margin: 0; color: var(--interactive-accent);">📝 Question 18</h3>
-        <span style="font-size: 0.8em; background: var(--background-modifier-border); padding: 2px 10px; border-radius: 20px;">Question word</span>
-    </header>
-    <section>
-        <p><strong>Prompt:</strong><br>
-        <code style="background: var(--background-primary); padding: 4px 8px; border-radius: 4px;">A：これは（　　　）ですか。 B：かばんです。</code></p>
-        <p><strong>Choices:</strong></p>
-        <ul style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 24px; margin: 8px 0 0 0;">
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">a. いくら</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">b. どちら</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">c. なん</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">d. だれ</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">e. どこ</li>
-        </ul>
-    </section>
-    <footer style="margin-top: 16px;">
-        <details style="padding: 10px 14px; background: var(--background-primary); border-radius: var(--radius-m); border: 1px solid var(--background-modifier-border);">
-            <summary style="font-weight: bold; color: var(--interactive-accent); cursor: pointer;">✅ Reveal Answer + Romaji</summary>
-            <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--background-modifier-border);">
-                <p><strong>Answer:</strong> <code style="background: var(--background-secondary); padding: 2px 6px; border-radius: 4px;">c. なん</code></p>
-                <p><strong>Romaji:</strong> <em>nan</em></p>
-                <p><strong>Explanation:</strong> Asking “What is this?” → これは<strong>なん</strong>ですか。 (Kore wa <strong>nan</strong> desu ka?) Answer: “It’s a bag.”</p>
-            </div>
-        </details>
-    </footer>
-</article>
+**Câu 9:**  
+`あれは（　　　）の　本ですか。…すもうの本です。`  
+**Lựa chọn:** a. だれ  b. どちら  c. いくら  d. どこ  e. なん  
+**Đáp án:** e. なん (nan) – hỏi "thể loại gì".
 
-<!-- ========================================================== -->
-<!--                        CÂU 19                               -->
-<!-- ========================================================== -->
-<article style="margin-top: 28px; padding: 16px 20px; background: var(--background-secondary); border-radius: var(--radius-m); border: 1px solid var(--background-modifier-border);">
-    <header style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--interactive-accent); padding-bottom: 6px; margin-bottom: 12px;">
-        <h3 style="margin: 0; color: var(--interactive-accent);">📝 Question 19</h3>
-        <span style="font-size: 0.8em; background: var(--background-modifier-border); padding: 2px 10px; border-radius: 20px;">Question word</span>
-    </header>
-    <section>
-        <p><strong>Prompt:</strong><br>
-        <code style="background: var(--background-primary); padding: 4px 8px; border-radius: 4px;">A：サカイでんき　は　（　　　）ですか。 B：４かいです。</code></p>
-        <p><strong>Choices:</strong></p>
-        <ul style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 24px; margin: 8px 0 0 0;">
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">a. いくら</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">b. なん</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">c. どこ</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">d. どちら</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">e. だれ</li>
-        </ul>
-    </section>
-    <footer style="margin-top: 16px;">
-        <details style="padding: 10px 14px; background: var(--background-primary); border-radius: var(--radius-m); border: 1px solid var(--background-modifier-border);">
-            <summary style="font-weight: bold; color: var(--interactive-accent); cursor: pointer;">✅ Reveal Answer + Romaji</summary>
-            <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--background-modifier-border);">
-                <p><strong>Answer:</strong> <code style="background: var(--background-secondary); padding: 2px 6px; border-radius: 4px;">b. なん</code></p>
-                <p><strong>Romaji:</strong> <em>nan</em></p>
-                <p><strong>Explanation:</strong> Asking “which floor?” – the full question is サカイでんき は <strong>なんかい</strong> ですか, but here it's shortened to just なん because かい is implied by the answer ４かい.</p>
-            </div>
-        </details>
-    </footer>
-</article>
+---
 
-<!-- ========================================================== -->
-<!--                        CÂU 20                               -->
-<!-- ========================================================== -->
-<article style="margin-top: 28px; padding: 16px 20px; background: var(--background-secondary); border-radius: var(--radius-m); border: 1px solid var(--background-modifier-border);">
-    <header style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--interactive-accent); padding-bottom: 6px; margin-bottom: 12px;">
-        <h3 style="margin: 0; color: var(--interactive-accent);">📝 Question 20</h3>
-        <span style="font-size: 0.8em; background: var(--background-modifier-border); padding: 2px 10px; border-radius: 20px;">Reading</span>
-    </header>
-    <section>
-        <p><strong>Prompt:</strong><br>
-        Choose the correct reading for: <strong>１4 cái</strong> (14 items – general counter)</p>
-        <p><strong>Choices:</strong></p>
-        <ul style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 24px; margin: 8px 0 0 0;">
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">a. じゅうよんつ</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">b. じゅうよん</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">c. じゅうようつ</li>
-            <li style="background: var(--background-primary); padding: 4px 12px; border-radius: 4px; border: 1px solid var(--background-modifier-border);">d. じゅうよっつ</li>
-        </ul>
-    </section>
-    <footer style="margin-top: 16px;">
-        <details style="padding: 10px 14px; background: var(--background-primary); border-radius: var(--radius-m); border: 1px solid var(--background-modifier-border);">
-            <summary style="font-weight: bold; color: var(--interactive-accent); cursor: pointer;">✅ Reveal Answer + Romaji</summary>
-            <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--background-modifier-border);">
-                <p><strong>Answer:</strong> <code style="background: var(--background-secondary); padding: 2px 6px; border-radius: 4px;">d. じゅうよっつ</code></p>
-                <p><strong>Romaji:</strong> <em>juuyottsu</em></p>
-                <p><strong>Explanation:</strong> 14 items (general counter) = じゅう (10) + よっつ (4) → <strong>じゅうよっつ</strong>.</p>
-            </div>
-        </details>
-    </footer>
-</article>
+**Câu 10:**  
+Chọn số đúng cho Kanji: **二万百五**  
+**Lựa chọn:** a. 21050  b. 2105  c. 20105  d. 2150  e. 20150  
+**Đáp án:** c. 20105
 
-<!-- ═══════════════════════════════════════════════════ -->
-<!--                   END OF ALL 20                    -->
-<!-- ═══════════════════════════════════════════════════ -->
+---
+
+**Câu 11:**  
+`私（　　　）ズボンは　このズボンです。`  
+**Lựa chọn:** a. で  b. と  c. の  d. を  e. も  
+**Đáp án:** c. の (no) – "quần của tôi".
+
+---
+
+**Câu 12:**  
+`______    ______   ___★___  ______   ______     です。`  
+**Lựa chọn:** a. は  b. パソコン  c. これ  d. たなかさん  e. の  
+**Đáp án:** d. たなかさん (từ thứ 3).
+
+---
+
+**Câu 13:**  
+Chọn cách đọc đúng: **lầu 10**  
+**Lựa chọn:** a. じゅうかい  b. じゅっかい  c. じゅうか  d. とおかい  
+**Đáp án:** b. じゅっかい (jukkai)
+
+---
+
+**Câu 14:**  
+`A：おやこどんを3つ　（　　　　）　ビールを１つ　ください。`  
+**Lựa chọn:** a. を  b. の  c. と  d. で  e. も  
+**Đáp án:** c. と (to) – liệt kê "và".
+
+---
+
+**Câu 15:**  
+`Ａ：これは(            )の けいたいでんわ ですか。 Ｂ：日本の けいたいでんわです`  
+**Lựa chọn:** a. なんの  b. どれ  c. だれ  d. どこ  
+**Đáp án:** d. どこ (doko) – hỏi "nước nào".
+
+---
+
+**Câu 16:**  
+`______    ______    ______   ______   ___★___   のです。`  
+**Lựa chọn:** a. ナタポンさん  b. とけい  c. 日本  d. は  e. の  
+**Đáp án:** c. 日本 (từ thứ 5).
+
+---
+
+**Câu 17:**  
+Chọn Kanji đúng cho từ **in đậm**: `•りんご　を　**みっつ**　ください`  
+**Lựa chọn:** a. 三っつ  b. 五つ  c. 三つ  d. 四つ  
+**Đáp án:** c. 三つ (mittsu)
+
+---
+
+**Câu 18:**  
+`A：これは（　　　）ですか。　B：かばんです。`  
+**Lựa chọn:** a. いくら  b. どちら  c. なん  d. だれ  e. どこ  
+**Đáp án:** c. なん (nan) – hỏi "cái gì".
+
+---
+
+**Câu 19:**  
+`A：サカイでんき　は　（　　　）ですか。　B：４かいです。`  
+**Lựa chọn:** a. いくら  b. なん  c. どこ  d. どちら  e. だれ  
+**Đáp án:** b. なん (nan) – hỏi "tầng mấy".
+
+---
+
+**Câu 20:**  
+Chọn cách đọc đúng: **１4 cái**  
+**Lựa chọn:** a. じゅうよんつ  b. じゅうよん  c. じゅうようつ  d. じゅうよっつ  
+**Đáp án:** d. じゅうよっつ (juuyottsu)
+
+---
+
+**Câu 21:**  
+`A：ミラーさんのかさは（　　　　）ですか。　B：あそこです。`  
+**Lựa chọn:** a. どこ  b. ワンさん  c. なん  d. いくら  e. だれ  
+**Đáp án:** a. どこ (doko)
+
+---
+
+**Câu 22:**  
+Điền từ vào ①, ②, ③, ④ trong đoạn hội thoại:  
+てんいん：いらっしゃいませ。  
+きゃく:　 ちゅうもんを　（➀　　　　　）  
+てんいん：はい、（②　　　　　）。  
+きゃく：とんかつ　を　ください。  
+てんいん：（③　　　　）。かしこまりました。しょうしょう　おまち　ください。  
+きゃく：はい、（④　　　　）  
+**Đáp án:** ➀ どうぞ (douzo) / ② とんかつですね (tonkatsu desu ne) / ③ おねがいします (onegaishimasu) / ④ ありがとうございます。 (arigatou gozaimasu.)
+
+---
+
+**Câu 23:**  
+`A：「さよなら」は　えいご（　　    ）なんですか。 B：「Goodbye」です 。`  
+**Lựa chọn:** a. で  b. も  c. は  d. を  e. と  
+**Đáp án:** a. で (de) – "bằng tiếng Anh".
+
+---
+
+**Câu 24:**  
+Chọn cách đọc đúng cho phần **in đậm**: `私の誕生日は **九がつ　六日** です。`  
+**Lựa chọn:** a. きゅうがつ　むいか  b. くがつ　むいか  c. くがつ　むっか  d. くがつ　むか  e. きゅうがつ　むっか  f. きゅうがつ　むか  
+**Đáp án:** b. くがつ　むいか (kugatsu muika)
+
+---
+
+**Câu 25:**  
+`______    ______    ______    ___★___    ______     です。`  
+**Lựa chọn:** a. は  b. これ  c. で  d. ぎゅうにく  e. 日本語  
+**Đáp án:** e. 日本語 (từ thứ 4)
+
+---
+
+**Câu 26:**  
+`あれは_________の　ジュースです。`  
+**Lựa chọn:** a. けしゴム  b. いちご  c. 日本語  d. 本  
+**Đáp án:** b. いちご (ichigo) – nước ép dâu.
+
+---
+
+**Câu 27:**  
+`A：3つ　の　でんき　は　（　　　）ですか。 B：6000円です。`  
+**Lựa chọn:** a. だれ  b. いくら  c. どこ  d. どちら  e. なん  
+**Đáp án:** b. いくら (ikura) – "bao nhiêu tiền".
+
+---
+
+**Câu 28:**  
+Chọn cách đọc đúng cho phần **in đậm**: `私の誕生日は **七がつ　七日** です。`  
+**Lựa chọn:** a. しちがつ　ここのか  b. なながつ　なのか  c. なながつ　ななにち  d. しちがつ　ななか  e. しちがつ　なのか  f. くがつ　ここのか  
+**Đáp án:** a. しちがつ　ここのか (shichigatsu kokonoka)
+
+---
+
+**Câu 29:**  
+Chọn cách đọc đúng: **三百円**  
+**Lựa chọn:** a. みっひゃくえん  b. さんひゃくえん  c. さんびゃくえん  d. さんぜんえん  
+**Đáp án:** c. さんびゃくえん (sanbyaku-en)
+
+---
+
+**Câu 30:**  
+`（　　　）　りょうりは　ぶたにくの　スープです。`  
+**Lựa chọn:** a. どこ  b. これ  c. この  d. ここ  
+**Đáp án:** c. この (kono) – "món ăn này".
+
+---
+
+**Câu 31:**  
+Chọn cách đọc đúng cho Kanji: `誕生日　は **四がつ　七日** です。`  
+**Lựa chọn:** a. しちがつ　ななか  b. しがつ　なのか  c. よんがつ　なのか  d. しがつ　ななか  
+**Đáp án:** b. しがつ　なのか (shigatsu nanoka)
+
+---
+
+**Câu 32:**  
+Chọn cách đọc đúng cho phần **in đậm**: `たまご　を **四つ**　ください`  
+**Lựa chọn:** a. よつつ  b. よっつ  c. ようつ  d. よつ  
+**Đáp án:** b. よっつ (yottsu)
+
+---
+
+**Câu 33:**  
+Điền từ vào ①, ②, ③:  
+きゃく：すみません、これ、（➀　　　　　）ですか。  
+てんいん：1230円です。  
+きゃく：（②　　　　　　）は？  
+てんいん：あの本　は　1000円です。ちゅうごく　の　本です  
+きゃく：じゃ、これ　を　（③　　　　　）  
+**Đáp án:** ➀ いくら (ikura) / ② あの本 (ano hon) / ③ ください (kudasai)
+
+---
+
+**Câu 34:**  
+`A：これ　は　（　　　）の　でんしじしょですか。 B：ベトナム語　の　でんしじしょです。`  
+**Lựa chọn:** a. だれ  b. どちら  c. いくら  d. なん  e. どこ  
+**Đáp án:** d. なん (nan) – "ngôn ngữ gì".
+
+---
+
+**Câu 35:**  
+Chọn câu dùng **エレベーター** đúng:  
+a. これは　エレベーターの　スープです。  
+b. たんじょうびは　エレベーターです。  
+c. エレベーターと　コーヒーを　ください。  
+d. エレベーターは　あちらです。  
+**Đáp án:** d. エレベーターは　あちらです。 (Thang máy ở đằng kia.)
+
+---
+
+**Câu 36:**  
+`あそこは　（　　　）やです。` – Chọn từ không phù hợp.  
+**Lựa chọn:** a. かんこく  b. やさい  c. こめ  d. にく  
+**Đáp án:** a. かんこく (Kankoku) – không phải cửa hàng.
+
+---
+
+**Câu 37:**  
+Chọn Kanji đúng cho: **59260えん**  
+**Lựa chọn:** a. 五万九千二百六十門  b. 五万九千二百六十円  c. 五万九千三百六十門  d. 五千九万ニ百六十円  
+**Đáp án:** b. 五万九千二百六十円
+
+---
+
+**Câu 38:**  
+Chọn cách đọc đúng cho phần **in đậm**: `アンナさんは **八才** です。`  
+**Lựa chọn:** a. ろくさい  b. はっさい  c. ななさい  d. はち  
+**Đáp án:** b. はっさい (hassai) – 8 tuổi.
+
+---
+
+**Câu 39:**  
+`A：みず　（　　　）　ください。 B：はい。`  
+**Lựa chọn:** a. を  b. も  c. と  d. で  e. は  
+**Đáp án:** a. を (o) – tân ngữ trực tiếp.
+
+---
+
+**Câu 40:**  
+Chọn Kanji đúng cho: **1846**  
+**Lựa chọn:** a. 千八白四六  b. 一千八白四十六  c. 一万八千四十六  d. 千八白四十六  
+**Đáp án:** d. 千八白四十六
+
+---
+
+**Câu 41:**  
+`______    ______    ______    ___★___     ______      ではありません.`  
+**Lựa chọn:** a. の  b. は  c. これ  d. けいたいでんわ  e. アメリカ  
+**Đáp án:** e. アメリカ (từ thứ 4)
+
+---
+
+**Câu 42:**  
+Chọn cách đọc đúng: **八つ**  
+**Lựa chọn:** a. よっつ  b. はっつ  c. ようつ  d. やっつ  
+**Đáp án:** d. やっつ (yattsu)
+
+---
+
+**Câu 43:**  
+Đọc đoạn hội thoại và trả lời: **じしょ　は　どこですか。**  
+**Lựa chọn:** a. あそこ  b. 本やです  c. ニコニコです  d. じしょです  
+**Đáp án:** a. あそこ (asoko) – ở đằng kia.
+
+---
+
+**Câu 44:**  
+`トイレは_________です。`  
+**Lựa chọn:** a. これ  b. どちら  c. あそこ  d. どこ  
+**Đáp án:** c. あそこ (asoko)
+
+---
+
+**Câu 45:**  
+`______    ______   ___★___    ______   ______      のです。`  
+**Lựa chọn:** a. は  b. の  c. マリアさん  d. かばん  e. イタリア  
+**Đáp án:** e. イタリア (từ thứ 3)
+
+---
+
+**Câu 46:**  
+`A：これ　は　（　　　）の　でんしじしょですか。 B：私の　でんしじしょです。`  
+**Lựa chọn:** a. どちら  b. どこ  c. なん  d. いくら  e. だれ  
+**Đáp án:** e. だれ (dare) – "của ai".
+
+---
+
+**Câu 47:**  
+`Ａ：エレベーターは《　　　　　　　　　　》ですか。 Ｂ：あそこです。`  
+**Lựa chọn:** a. どこ  b. だれ  c. なん  
+**Đáp án:** a. どこ (doko)
+
+---
+
+**Câu 48:**  
+`あそこは　（　　　）です。` – Chọn từ không phù hợp.  
+**Lựa chọn:** a. カメラ  b. 100円ショップ  c. トイレ  d. スーパー  
+**Đáp án:** a. カメラ (không phải địa điểm).
+
+---
+
+**Câu 49:**  
+`これは　やさい（　　　）とりにく　（　　　）スープです。`  
+**Lựa chọn:** a. と＆の  b. を＆と  c. は＆の  d. の＆と  e. と＆も  
+**Đáp án:** a. と (liệt kê) và の (sở hữu).
+
+---
+
+**Câu 50:**  
+`あのう、（　　　）とけいは　いくらですか。`  
+**Lựa chọn:** a. これ  b. ここ  c. この  
+**Đáp án:** c. この (kono) – "đồng hồ này".
+
+---
+
+**Câu 51:**  
+Chọn cách đọc đúng: **九つ**  
+**Lựa chọn:** a. なのつ  b. このつ  c. ここのつ  d. こなつ  
+**Đáp án:** c. ここのつ (kokonotsu)
+
+---
+
+**Câu 52:**  
+Chọn cách đọc đúng cho phần **in đậm**: `マリヤムさんは **七十才** です。`  
+**Lựa chọn:** a. 70さい  b. 90さい  c. 50さい  d. 68さい  
+**Đáp án:** a. 70さい (nanajū-sai)
+
+---
+
+**Câu 53:**  
+`A：かいしゃは（　　　）ですか。 B：FPTです。`  
+**Lựa chọn:** a. なん  b. どこ  c. だれ  d. いくら  e. どちら  
+**Đáp án:** a. なん (nan) – "công ty gì".
+
+---
+
+**Câu 54:**  
+`これは　（　　　　）のワインです。`  
+**Lựa chọn:** a. けしゴム  b. フランス  c. エレベーター  d. トイレットペーパー  
+**Đáp án:** b. フランス (Furansu) – rượu vang Pháp.
+
+---
+
+**Câu 55:**  
+`（　　　　）は　ぶたにく　の　りょうりです。`  
+**Lựa chọn:** a. やさい  b. ビール  c. エスカレーター  d. とんかつ  
+**Đáp án:** d. とんかつ (tonkatsu) – món thịt heo.
+
+---
+
+**Câu 56:**  
+Chọn cách đọc đúng cho phần **in đậm**: `メアリーさんは **二十八才** です。`  
+**Lựa chọn:** a. 18さい  b. 20さい  c. 16さい  d. 28さい  
+**Đáp án:** d. 28さい (nijūhassai)
+
+---
+
+**Câu 57:**  
+Chọn Kanji đúng cho: **1378**  
+**Lựa chọn:** a. 千三百七十八  b. 一千三百七八  c. 千百三七十八  d. 一千三百七十八  
+**Đáp án:** a. 千三百七十八
+
+---
+
+**Câu 58:**  
+Đọc đoạn hội thoại và trả lời: **ほんや　の　なまえ　は　なんですか？**  
+**Lựa chọn:** a. 本や  b. じしょ  c. ニコニコ  d. ココ二二  
+**Đáp án:** c. ニコニコ (Nikoniko)
+
+---
+
+**Câu 59:**  
+Chọn cách đọc đúng cho phần **in đậm**: `•日本人の　学生　は **六人** です。`  
+**Lựa chọn:** a. ろくひと  b. ろくにん  c. ろっにん  d. ろくじん  
+**Đáp án:** b. ろくにん (rokunin) – 6 người.
+
+---
+
+**Câu 60:**  
+Điền từ vào ①, ②, ③:  
+きゃく：すみません、これは（➀　　　　　）の　本ですか。  
+てんいん：いいえ、（②　　　　　）。にんじゃ　の　本です。さむらい　の　ほん　は　これです。  
+きゃく：ああ、そうですか。これは（③　　　　）の　本ですか。  
+てんいん：日本の　本です。  
+**Đáp án:** ➀ さむらい (samurai) / ② さむらいじゃありません (samurai ja arimasen) / ③ どこ (doko)
+
+---
+
+**Câu 61:**  
+`A：まいばん（　　　　）をしますか。 B：本を　よみます。`  
+**Lựa chọn:** a. なん  b. だれ  c. なに  d. 本  
+**Đáp án:** c. なに (nani) – "làm gì" vào mỗi tối.
+
+---
+
+**HẾT 61 CÂU**
