@@ -408,6 +408,94 @@ function patchObsidianFlavoredMarkdownMermaid(pluginDir: string, name: string): 
   }
 }
 
+function patchCrawlLinks(pluginDir: string, name: string): void {
+  if (name !== "crawl-links") return
+
+  const patches: Array<{
+    file: string
+    replacements: Array<[RegExp, string]>
+  }> = [
+    {
+      file: path.join(pluginDir, "src", "transformer.ts"),
+      replacements: [
+        [
+          /if\s*\(\s*\["img",\s*"video",\s*"audio",\s*"iframe"\]\.includes\(node\.tagName\)\s*&&\s*node\.properties\s*&&\s*typeof\s*node\.properties\.src\s*===\s*"string"\s*\)\s*\{/g,
+          `if (
+                ["img", "video", "audio", "iframe", "embed"].includes(node.tagName) &&
+                node.properties &&
+                typeof node.properties.src === "string"
+              ) {
+                if (opts.lazyLoad) {
+                  node.properties.loading = "lazy";
+                }
+
+                if (!isAbsoluteUrlWithOptions(node.properties.src, { httpOnly: false })) {
+                  let dest = node.properties.src as RelativeURL;
+                  dest = node.properties.src = transformLink(fileSlug, dest, transformOptions);
+                  node.properties.src = dest;
+                }
+              }
+
+              if (
+                node.tagName === "object" &&
+                node.properties &&
+                typeof node.properties.data === "string"
+              ) {
+                if (!isAbsoluteUrlWithOptions(node.properties.data, { httpOnly: false })) {
+                  let dest = node.properties.data as RelativeURL;
+                  dest = node.properties.data = transformLink(fileSlug, dest, transformOptions);
+                  node.properties.data = dest;
+                }
+              }
+
+              if (false) {`,
+        ],
+      ],
+    },
+    {
+      file: path.join(pluginDir, "dist", "index.js"),
+      replacements: [
+        [
+          /if\s*\(\["img",\s*"video",\s*"audio",\s*"iframe"\]\.includes\(node\.tagName\)\s*&&\s*node\.properties\s*&&\s*typeof\s*node\.properties\.src\s*===\s*"string"\)\s*\{/g,
+          `if (["img", "video", "audio", "iframe", "embed"].includes(node.tagName) && node.properties && typeof node.properties.src === "string") {
+                if (opts.lazyLoad) {
+                  node.properties.loading = "lazy";
+                }
+                if (!isAbsoluteUrlWithOptions(node.properties.src)) {
+                  let dest = node.properties.src;
+                  dest = node.properties.src = transformLink(fileSlug, dest, transformOptions);
+                  node.properties.src = dest;
+                }
+              }
+              if (node.tagName === "object" && node.properties && typeof node.properties.data === "string") {
+                if (!isAbsoluteUrlWithOptions(node.properties.data)) {
+                  let dest = node.properties.data;
+                  dest = node.properties.data = transformLink(fileSlug, dest, transformOptions);
+                  node.properties.data = dest;
+                }
+              }
+              if (false) {`,
+        ],
+      ],
+    },
+  ]
+
+  for (const patch of patches) {
+    if (!fs.existsSync(patch.file)) continue
+
+    const original = fs.readFileSync(patch.file, "utf-8")
+    let updated = original
+
+    for (const [pattern, replacement] of patch.replacements) {
+      updated = updated.replace(pattern, replacement)
+    }
+
+    if (updated !== original) {
+      fs.writeFileSync(patch.file, updated)
+    }
+  }
+}
+
 function buildInstalledPlugin(pluginDir: string, name: string, verbose?: boolean): void {
   if (hasPrebuiltDist(pluginDir)) {
     if (verbose) {
@@ -582,6 +670,7 @@ export async function installPlugin(
   }
 
   patchObsidianFlavoredMarkdownMermaid(pluginDir, spec.name)
+  patchCrawlLinks(pluginDir, spec.name)
   buildInstalledPlugin(pluginDir, spec.name, options.verbose)
 
   if (options.verbose) {
