@@ -8,4 +8,4 @@ ads
 
 
 ![[Tesst-20260818180833835.svg|720]]
-hello![[Tesst 2026-08-18 18.29.47.excalidraw]]
+hello![[Tesst 2026-08-18 18.29.47.excalidraw]] 
