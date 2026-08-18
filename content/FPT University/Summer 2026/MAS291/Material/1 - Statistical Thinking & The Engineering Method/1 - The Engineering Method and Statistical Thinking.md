@@ -26,21 +26,7 @@
 
 Trong thực tế, quy trình này là một vòng lặp liên tục, nhưng cơ bản có 5 bước chính:
 
-```mermaid
-graph TD
-    A[Xác định vấn đề]
-    B[Phát triển mô hình]
-    C[Thu thập dữ liệu]
-    D[Phân tích dữ liệu]
-    E[Ra quyết định]
-
-    A --> B
-    B --> C
-    C --> D
-    D --> E
-
-    E -.->|"Lặp lại tinh chỉnh"| B
-```
+![[1 - The Engineering Method and Statistical Thinking.diagram-1.svg]]
 
 | Bước | Mô tả | Ví dụ |
 | :--- | :--- | :--- |
@@ -98,12 +84,7 @@ graph TD
 
 Là kỹ sư, em không bao giờ có đủ thời gian và tiền bạc để kiểm tra 100% sản phẩm. Kỹ sư luôn phải suy luận từ một **Mẫu (Sample)** nhỏ để đưa ra kết luận cho toàn bộ **Tổng thể (Population)**.
 
-```mermaid
-graph LR
-    A[Population <br> Tổng thể] -->|Lấy mẫu| B[Sample <br> Mẫu]
-    B -->|Statistical Inference <br> Suy diễn thống kê| A
-    B -->|Phân tích| C[Kết luận]
-```
+![[1 - The Engineering Method and Statistical Thinking.diagram-2.svg]]
 
 | Khái niệm | Định nghĩa | Ví dụ |
 | :--- | :--- | :--- |
@@ -134,27 +115,7 @@ Thống kê xử lý việc:
 
 Hai khái niệm này không tách rời mà lồng ghép vào nhau. Tư duy thống kê đóng vai trò chủ đạo ở bước *"Thu thập dữ liệu"* và *"Phân tích dữ liệu"* trong Phương pháp Kỹ thuật.
 
-```mermaid
-graph TD  
-  
-A["🔍 Define Problem"]  
-B["🛠️ Develop Model"]  
-C["📊 Obtain Data"]  
-D["📈 Analyze Data"]  
-E["✅ Make Decisions"]  
-  
-A --> B --> C --> D --> E  
-  
-F["Variability"]  
-G["Sampling"]  
-H["Inference"]  
-  
-F -. influences .-> C  
-G -. guides .-> C  
-H -. supports .-> D  
-  
-D -->|"Statistical Evidence"| E
-```
+![[1 - The Engineering Method and Statistical Thinking.diagram-3.svg]]
 
 Kỹ sư phải dùng thống kê để:
 - **Thiết kế thí nghiệm (Design of Experiments)** sao cho lấy được dữ liệu hữu ích nhất với chi phí rẻ nhất.
@@ -182,13 +143,7 @@ Hãy xem xét việc một kỹ sư thiết kế một **đầu nối (connector
 > [!example] Kết quả đo
 > Lực kéo đứt trung bình của loại dày hơn là 13.4 lbs. Tuy nhiên, các giá trị bị phân tán (có $\epsilon$). Có những mẫu dày nhưng lực kéo vẫn yếu hơn một số mẫu mỏng.
 
-```mermaid
-graph TD
-    subgraph "Dot diagram"
-        A1[3/32 inch]
-        A2[1/8 inch]
-    end
-```
+![[1 - The Engineering Method and Statistical Thinking.diagram-4.svg]]
 
 ### Bước 5: Make decisions
 > [!example] Áp dụng Statistical Thinking

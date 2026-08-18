@@ -49,20 +49,7 @@ Nó không chỉ là một đống dữ liệu, mà là dữ liệu có mối qu
 
 Sơ đồ dưới đây minh họa một database đơn giản:
 
-```mermaid
-graph TD
-    DB[Database: QuanLySinhVien] --> Table1[Table: SinhVien]
-    DB --> Table2[Table: MonHoc]
-    DB --> Table3[Table: Diem]
-    Table1 --- Col11((MSSV - PK))
-    Table1 --- Col12((HoTen))
-    Table1 --- Col13((Lop))
-    Table2 --- Col21((MaMon - PK))
-    Table2 --- Col22((TenMon))
-    Table3 --- Col31((MSSV - FK))
-    Table3 --- Col32((MaMon - FK))
-    Table3 --- Col33((Diem))
-```
+![[Chap 1. Relation Databases Managerment Model.diagram-1.svg]]
 
 Trong một Database ta có các **Table (bảng)**, trong bảng có các **Column (cột – thuộc tính)** và **Row (dòng – bản ghi)**. Chúng ta sẽ nói kỹ hơn ở phần sau.
 
@@ -129,38 +116,7 @@ Hãy lấy hệ thống quản lý sinh viên làm ví dụ xuyên suốt.
 
 ### 5.2. Minh họa bằng ERD (Entity Relationship Diagram)
 
-```mermaid
-erDiagram
-    STUDENT {
-        string StudentID PK "Mã SV"
-        string FullName "Họ tên"
-        date DoB "Ngày sinh"
-        string ClassID FK "Mã lớp"
-    }
-    CLASSROOM {
-        string ClassID PK "Mã lớp"
-        string ClassName "Tên lớp"
-        string DepartmentID FK "Mã khoa"
-    }
-    DEPARTMENT {
-        string DepartmentID PK "Mã khoa"
-        string DeptName "Tên khoa"
-    }
-    COURSE {
-        string CourseID PK "Mã môn"
-        string CourseName "Tên môn"
-        int Credits "Số tín chỉ"
-    }
-    ENROLLMENT {
-        string StudentID FK
-        string CourseID FK
-        float Grade "Điểm"
-    }
-    STUDENT ||--o{ ENROLLMENT : "đăng ký"
-    COURSE ||--o{ ENROLLMENT : "được đăng ký"
-    STUDENT }o--|| CLASSROOM : "thuộc"
-    CLASSROOM }o--|| DEPARTMENT : "thuộc"
-```
+![[Chap 1. Relation Databases Managerment Model.diagram-2.svg]]
 
 Các em thấy rằng các bảng không đứng riêng lẻ mà liên kết qua các đường mũi tên nhờ khóa chính – khóa ngoại. Đó chính là sức mạnh của “quan hệ”.
 
@@ -177,16 +133,7 @@ SQL cho phép bạn: hỏi dữ liệu (`SELECT`), thêm mới (`INSERT`), sửa
 
 ### 6.2. Luồng hoạt động khi bạn gửi một câu SQL
 
-```mermaid
-flowchart LR
-    A[Người dùng / Ứng dụng] -->|Gửi câu SQL: SELECT * FROM Student| B[Trình phân tích SQL - Parser]
-    B -->|Kiểm tra cú pháp, ngữ nghĩa| C[Query Optimizer - Tối ưu truy vấn]
-    C -->|Chọn cách thực thi nhanh nhất| D[Execution Engine]
-    D -->|Yêu cầu đọc/ghi dữ liệu| E[Buffer Manager]
-    E -->|Làm việc với bộ nhớ đệm| F[Storage Engine]
-    F -->|Thao tác file dữ liệu trên đĩa| G[Database]
-    F -->|Trả kết quả| A
-```
+![[Chap 1. Relation Databases Managerment Model.diagram-3.svg]]
 
 Như vậy, câu SQL của bạn không “chạy thẳng” vào ổ cứng, mà trải qua nhiều bước phân tích, tối ưu để đạt hiệu năng cao nhất. Phần 8 sẽ mổ xẻ kỹ hơn.
 
@@ -493,27 +440,7 @@ Giải thích:
 
 ### 15.1. Mindmap tổng quan
 
-```mermaid
-mindmap
-  root((RDBMS & SQL))
-    Dữ liệu và Database
-      Dữ liệu thô vs Thông tin
-      Database là tập hợp dữ liệu có tổ chức
-    DBMS vs RDBMS
-      DBMS: phần mềm quản lý database
-      RDBMS: dựa trên mô hình quan hệ (bảng)
-    Cấu trúc RDBMS
-      Table, Row, Column
-      PK (định danh duy nhất)
-      FK (liên kết bảng)
-    SQL
-      Ngôn ngữ truy vấn cấu trúc
-      5 nhóm: DDL, DML, DQL, DCL, TCL
-    Thiết kế CSDL
-      Entity: đối tượng thực tế, giai đoạn phân tích
-      Table: cấu trúc lưu trữ, giai đoạn triển khai
-      Chuyển Entity -> Table + PK, FK
-```
+![[Chap 1. Relation Databases Managerment Model.diagram-4.svg]]
 
 ### 15.2. Cheat Sheet ôn thi (1 trang)
 

@@ -53,14 +53,7 @@ Nếu không có mô hình, các lập trình viên sẽ “xây nhà trên cát
 
 Hãy hình dung quá trình sau:
 
-```mermaid
-flowchart TD
-    A[Business Requirements - Yêu cầu nghiệp vụ] --> B[Business Rules - Quy tắc nghiệp vụ]
-    B --> C[Entities & Attributes - Thực thể & Thuộc tính]
-    C --> D[Relationships - Mối quan hệ]
-    D --> E[Logical Database Design - Thiết kế logic]
-    E --> F[Physical Database - Cơ sở dữ liệu vật lý]
-```
+![[Chap 2. DATA MODELING & ENTITY RELATIONSHIP MODELING.diagram-1.svg]]
 
 Mỗi bước là một mức trừu tượng giảm dần. Ban đầu, khách hàng nói: “Tôi muốn quản lý sinh viên và môn học”. Người thiết kế sẽ phân tích để tìm ra:
 - Quy tắc: “Mỗi sinh viên chỉ thuộc một lớp”, “Mỗi môn học có thể có nhiều sinh viên đăng ký”.
@@ -88,14 +81,7 @@ Cuối cùng ta có các bảng với khóa chính, khóa ngoại.
 
 Ví dụ: Tổ chức công ty
 
-```mermaid
-graph TD
-    Company[Company] --> Dept1[Phòng Kỹ thuật]
-    Company --> Dept2[Phòng Nhân sự]
-    Dept1 --> Emp1[Nhân viên A]
-    Dept1 --> Emp2[Nhân viên B]
-    Dept2 --> Emp3[Nhân viên C]
-```
+![[Chap 2. DATA MODELING & ENTITY RELATIONSHIP MODELING.diagram-2.svg]]
 
 - **Ưu điểm**: Truy xuất nhanh nếu hỏi theo cấu trúc cây (ví dụ: tất cả nhân viên phòng Kỹ thuật).
 - **Nhược điểm**: Quan hệ nhiều-nhiều (ví dụ một nhân viên làm ở hai phòng) rất khó biểu diễn, phải lặp dữ liệu. Không linh hoạt.
@@ -106,14 +92,7 @@ graph TD
 > [!NOTE]  
 > Phát triển sau mô hình phân cấp, chuẩn CODASYL. Cho phép một node con có nhiều node cha, tạo thành đồ thị có hướng.
 
-```mermaid
-graph TD
-    Student1[SV A] -->|học| Course1[Môn CSDL]
-    Student1 -->|học| Course2[Môn Toán]
-    Student2[SV B] -->|học| Course1
-    Lecturer[GV X] -->|dạy| Course1
-    Lecturer -->|dạy| Course2
-```
+![[Chap 2. DATA MODELING & ENTITY RELATIONSHIP MODELING.diagram-3.svg]]
 
 - **Ưu điểm**: Biểu diễn được quan hệ nhiều-nhiều tự nhiên hơn.
 - **Nhược điểm**: Phức tạp, truy vấn phải duyệt theo con trỏ, người lập trình cần biết cấu trúc vật lý.
@@ -261,44 +240,17 @@ Relationship thể hiện sự kết hợp giữa các entity.
 - **One-to-One (1:1)**: Một thực thể A liên kết tối đa một thực thể B và ngược lại.  
   Ví dụ: `Truong` – `HieuTruong` (một trường có một hiệu trưởng, một hiệu trưởng quản lý một trường).
 
-```mermaid
-erDiagram
-    TRUONG {
-        string MaTruong PK
-    }
-    HIEUTRUONG {
-        string MaHT PK
-    }
-    TRUONG ||--|| HIEUTRUONG : "đứng đầu"
-```
+![[Chap 2. DATA MODELING & ENTITY RELATIONSHIP MODELING.diagram-4.svg]]
 
 - **One-to-Many (1:N)**: Một A liên kết nhiều B, mỗi B chỉ thuộc một A.  
   Ví dụ: `Lop` – `SinhVien` (một lớp có nhiều sinh viên, mỗi sinh viên thuộc một lớp).
 
-```mermaid
-erDiagram
-    LOP {
-        string MaLop PK
-    }
-    SINHVIEN {
-        string MaSV PK
-    }
-    LOP ||--o{ SINHVIEN : "thuộc"
-```
+![[Chap 2. DATA MODELING & ENTITY RELATIONSHIP MODELING.diagram-5.svg]]
 
 - **Many-to-Many (N:M)**: Một A liên kết nhiều B, mỗi B cũng liên kết nhiều A.  
   Ví dụ: `SinhVien` – `MonHoc` (một sinh viên học nhiều môn, một môn có nhiều sinh viên học).
 
-```mermaid
-erDiagram
-    SINHVIEN {
-        string MaSV PK
-    }
-    MONHOC {
-        string MaMon PK
-    }
-    SINHVIEN }o--o{ MONHOC : "đăng ký"
-```
+![[Chap 2. DATA MODELING & ENTITY RELATIONSHIP MODELING.diagram-6.svg]]
 
 Trong triển khai, quan hệ N:M cần một bảng trung gian (`DangKy`).
 
@@ -362,46 +314,7 @@ Yêu cầu: Quản lý sinh viên, giảng viên, khoa, môn học và đăng k�
 
 ### Sơ đồ ERD
 
-```mermaid
-erDiagram
-    KHOA {
-        string MaKhoa PK
-        string TenKhoa
-    }
-    SINHVIEN {
-        string MaSV PK
-        string HoTen
-        date NgaySinh
-        string SoNha
-        string Duong
-        string TP
-        string MaKhoa FK
-    }
-    GIANGVIEN {
-        string MaGV PK
-        string HoTen
-        date NgaySinh
-        string HocVi
-        string MaKhoa FK
-    }
-    MONHOC {
-        string MaMon PK
-        string TenMon
-        int SoTC
-        string MaGV FK
-    }
-    DANGKY {
-        string MaSV FK "PK"
-        string MaMon FK "PK"
-        float Diem
-        string HocKy
-    }
-    KHOA ||--o{ SINHVIEN : "có"
-    KHOA ||--o{ GIANGVIEN : "có"
-    GIANGVIEN ||--o{ MONHOC : "phụ trách"
-    SINHVIEN ||--o{ DANGKY : "có"
-    MONHOC ||--o{ DANGKY : "có"
-```
+![[Chap 2. DATA MODELING & ENTITY RELATIONSHIP MODELING.diagram-7.svg]]
 
 ---
 
@@ -410,14 +323,7 @@ erDiagram
 > [!IMPORTANT]  
 > ERD chỉ là bản thiết kế khái niệm. Để có database thật, chúng ta phải chuyển đổi nó thành các lệnh `CREATE TABLE`. Quy trình tổng thể:
 
-```mermaid
-flowchart TD
-    A[Requirements] --> B[Conceptual Design - ERD]
-    B --> C[Logical Design - Relational Schema]
-    C --> D[Normalization - Chuẩn hóa]
-    D --> E[Physical Design - Bảng, Index]
-    E --> F[(Physical Database)]
-```
+![[Chap 2. DATA MODELING & ENTITY RELATIONSHIP MODELING.diagram-8.svg]]
 
 **Quy tắc chuyển đổi cơ bản:**
 - Mỗi Entity mạnh → một Table, với PK giữ nguyên.
@@ -472,37 +378,7 @@ Quá trình chuẩn hóa (1NF, 2NF, 3NF, BCNF…) sẽ tách bảng trên thành
 
 ### 12.1. Mindmap Tổng kết
 
-```mermaid
-mindmap
-  root((Data Modeling & ERM))
-    Data Modeling
-      Purpose: avoid redundancy, anomalies
-      Process: Requirements -> Model -> DB
-    Types of Data Model
-      Hierarchical - tree
-      Network - graph
-      Relational - table - standard
-      Object-Oriented - object
-      ERM - conceptual tool
-    ERM
-      Components
-        Entity: strong, weak
-        Attribute: simple, composite, multi-valued, derived
-        Key: candidate, primary, alternate
-        Relationship: 1-1, 1-N, N-M
-    Design Process
-      1. Identify Entities
-      2. Identify Keys
-      3. Identify Relationships
-      4. Add Attributes
-      5. Review & finalize
-    ERD to Table Mapping
-      Entity -> Table
-      Attribute -> Column
-      PK, FK
-      Normalization - prevents anomalies
-    Misunderstanding: ERD is not DB, Entity is not Table
-```
+![[Chap 2. DATA MODELING & ENTITY RELATIONSHIP MODELING.diagram-9.svg]]
 
 ### 12.2. Cheat Sheet – Một trang ôn thi
 
