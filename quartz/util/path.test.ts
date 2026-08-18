@@ -392,3 +392,155 @@ describe("resolveRelative", () => {
     assert.strictEqual(path.resolveRelative("abc/def" as FullSlug, "ghi/" as SimpleSlug), "../ghi/")
   })
 })
+
+describe("relative asset resolution regression tests", () => {
+  const allSlugs = [
+    "note",
+    "image.svg",
+    "assets/image.svg",
+    "docs/note",
+    "docs/image.svg",
+    "docs/diagram/image.svg",
+    "docs/assets/image.svg",
+    "docs/sub/note",
+    "docs/sub/image.svg",
+    "docs/other/image.svg",
+    "chap1/note",
+    "chap1/diagram.svg",
+    "chap2/note",
+    "chap2/diagram.svg",
+    "docs/colocated-photo.png",
+    "docs/my-space-diagram.svg",
+    "docs/biến-cố.png",
+    "docs/other-note",
+    "root-note",
+  ] as FullSlug[]
+
+  const opts: TransformOptions = {
+    strategy: "shortest",
+    allSlugs,
+  }
+
+  test("root note with colocated image: content/note.md -> content/image.svg", () => {
+    assert.strictEqual(path.transformLink("note" as FullSlug, "image.svg", opts), "./image.svg")
+    assert.strictEqual(path.transformLink("note" as FullSlug, "./image.svg", opts), "./image.svg")
+  })
+
+  test("colocated PNG image in nested folder: content/docs/note.md -> content/docs/colocated-photo.png", () => {
+    assert.strictEqual(
+      path.transformLink("docs/note" as FullSlug, "colocated-photo.png", opts),
+      "../docs/colocated-photo.png",
+    )
+    assert.strictEqual(
+      path.transformLink("docs/note" as FullSlug, "./colocated-photo.png", opts),
+      "../docs/colocated-photo.png",
+    )
+  })
+
+  test("root note with assets folder: content/note.md -> content/assets/image.svg", () => {
+    assert.strictEqual(
+      path.transformLink("note" as FullSlug, "assets/image.svg", opts),
+      "./assets/image.svg",
+    )
+    assert.strictEqual(
+      path.transformLink("note" as FullSlug, "./assets/image.svg", opts),
+      "./assets/image.svg",
+    )
+  })
+
+  test("nested note with subdirectory asset: content/docs/note.md -> content/docs/diagram/image.svg", () => {
+    assert.strictEqual(
+      path.transformLink("docs/note" as FullSlug, "diagram/image.svg", opts),
+      "../docs/diagram/image.svg",
+    )
+    assert.strictEqual(
+      path.transformLink("docs/note" as FullSlug, "./diagram/image.svg", opts),
+      "../docs/diagram/image.svg",
+    )
+  })
+
+  test("nested note with parent asset: content/docs/note.md -> content/image.svg via ../image.svg", () => {
+    assert.strictEqual(
+      path.transformLink("docs/note" as FullSlug, "../image.svg", opts),
+      "../image.svg",
+    )
+  })
+
+  test("deeply nested note with ../../ parent asset", () => {
+    assert.strictEqual(
+      path.transformLink("docs/sub/note" as FullSlug, "../../image.svg", opts),
+      "../../image.svg",
+    )
+  })
+
+  test("deeply nested note with colocated and sibling assets", () => {
+    assert.strictEqual(
+      path.transformLink("docs/sub/note" as FullSlug, "image.svg", opts),
+      "../../docs/sub/image.svg",
+    )
+    assert.strictEqual(
+      path.transformLink("docs/sub/note" as FullSlug, "./image.svg", opts),
+      "../../docs/sub/image.svg",
+    )
+    assert.strictEqual(
+      path.transformLink("docs/sub/note" as FullSlug, "../other/image.svg", opts),
+      "../../docs/other/image.svg",
+    )
+  })
+
+  test("disambiguates identical asset names across separate folders", () => {
+    assert.strictEqual(
+      path.transformLink("chap1/note" as FullSlug, "diagram.svg", opts),
+      "../chap1/diagram.svg",
+    )
+    assert.strictEqual(
+      path.transformLink("chap2/note" as FullSlug, "diagram.svg", opts),
+      "../chap2/diagram.svg",
+    )
+  })
+
+  test("preserves URL anchors on asset links and note links", () => {
+    assert.strictEqual(
+      path.transformLink("docs/note" as FullSlug, "image.svg#layer1", opts),
+      "../docs/image.svg#layer1",
+    )
+    assert.strictEqual(
+      path.transformLink("docs/note" as FullSlug, "other-note#section-1", opts),
+      "../docs/other-note#section-1",
+    )
+  })
+
+  test("handles spaces in asset filenames", () => {
+    assert.strictEqual(
+      path.transformLink("docs/note" as FullSlug, "my space diagram.svg", opts),
+      "../docs/my-space-diagram.svg",
+    )
+    assert.strictEqual(
+      path.transformLink("docs/note" as FullSlug, "./my%20space%20diagram.svg", opts),
+      "../docs/my-space-diagram.svg",
+    )
+  })
+
+  test("handles Unicode filenames", () => {
+    assert.strictEqual(
+      path.transformLink("docs/note" as FullSlug, "biến cố.png", opts),
+      "../docs/biến-cố.png",
+    )
+  })
+
+  test("normal internal Markdown notes resolve correctly", () => {
+    assert.strictEqual(
+      path.transformLink("docs/note" as FullSlug, "other-note", opts),
+      "../docs/other-note",
+    )
+    assert.strictEqual(
+      path.transformLink("docs/note" as FullSlug, "./other-note", opts),
+      "../docs/other-note",
+    )
+    assert.strictEqual(
+      path.transformLink("docs/note" as FullSlug, "root-note", opts),
+      "../root-note",
+    )
+  })
+})
+
