@@ -1,3 +1,526 @@
 @use "./variables.scss" as *;
 
-// put your custom CSS here!
+// ============================================================================
+// DŨNG'S DIGITAL GARDEN — "THE MODERN KNOWLEDGE ATELIER" DESIGN SYSTEM
+// ============================================================================
+
+:root {
+  /* Canvas & Surface Backgrounds */
+  --bg-canvas: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-subtle: #f1f5f9;
+  --bg-highlight: #eff6ff;
+
+  /* Typography Colors */
+  --text-main: #0f172a;
+  --text-body: #334155;
+  --text-muted: #64748b;
+  --text-subtle: #94a3b8;
+
+  /* Academic Blue Accents */
+  --blue-primary: #2563eb;
+  --blue-hover: #1d4ed8;
+  --blue-light: #dbeafe;
+  --blue-soft-border: #bfdbfe;
+
+  /* Border & Divider Lines */
+  --border-card: #e2e8f0;
+  --border-divider: #cbd5e1;
+
+  /* Callout Semantic Tints (Light Mode) */
+  --callout-info-bg: #f0f9ff;
+  --callout-info-border: #0284c7;
+  --callout-note-bg: #f8fafc;
+  --callout-note-border: #64748b;
+  --callout-warn-bg: #fffbeb;
+  --callout-warn-border: #d97706;
+  --callout-danger-bg: #fef2f2;
+  --callout-danger-border: #dc2626;
+  --callout-success-bg: #f0fdf4;
+  --callout-success-border: #16a34a;
+
+  /* Graph View Palette */
+  --g-node: #3b82f6;
+  --g-node-active: #1d4ed8;
+  --g-node-inactive: #94a3b8;
+  --g-link: #e2e8f0;
+  --g-link-active: #60a5fa;
+}
+
+:root[saved-theme="dark"] {
+  --bg-canvas: #0b1120;
+  --bg-surface: #131c31;
+  --bg-subtle: #1e293b;
+  --bg-highlight: #1e293b88;
+
+  --text-main: #f8fafc;
+  --text-body: #e2e8f0;
+  --text-muted: #94a3b8;
+  --text-subtle: #64748b;
+
+  --blue-primary: #60a5fa;
+  --blue-hover: #93c5fd;
+  --blue-light: #1e3a8a;
+  --blue-soft-border: #1e40af;
+
+  --border-card: #1e293b;
+  --border-divider: #334155;
+
+  --callout-info-bg: #0c2d48;
+  --callout-info-border: #38bdf8;
+  --callout-note-bg: #1e293b;
+  --callout-note-border: #94a3b8;
+  --callout-warn-bg: #451a03;
+  --callout-warn-border: #fbbf24;
+  --callout-danger-bg: #450a0a;
+  --callout-danger-border: #f87171;
+  --callout-success-bg: #052e16;
+  --callout-success-border: #4ade80;
+
+  --g-node: #60a5fa;
+  --g-node-active: #93c5fd;
+  --g-node-inactive: #475569;
+  --g-link: #1e293b;
+  --g-link-active: #3b82f6;
+}
+
+// ============================================================================
+// 1. GLOBAL TYPOGRAPHY & READING CANVAS
+// ============================================================================
+
+body {
+  background-color: var(--light);
+  color: var(--darkgray);
+  font-family: var(--bodyFont);
+  line-height: 1.7;
+  letter-spacing: 0.005em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+article {
+  max-width: 740px;
+  margin: 0 auto;
+  line-height: 1.72;
+  font-size: 1.025rem;
+
+  & > h1:first-child {
+    font-size: 2.15rem;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-top: 0.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--dark);
+    letter-spacing: -0.015em;
+  }
+
+  & p {
+    line-height: 1.72;
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+    color: var(--darkgray);
+  }
+
+  & strong {
+    color: var(--dark);
+    font-weight: 650;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--headerFont);
+  color: var(--dark);
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  font-size: 1.45rem;
+  font-weight: 650;
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--lightgray);
+}
+
+h3 {
+  font-size: 1.18rem;
+  font-weight: 600;
+  margin-top: 1.85rem;
+  margin-bottom: 0.5rem;
+}
+
+h4, h5, h6 {
+  font-size: 1.02rem;
+  font-weight: 600;
+  margin-top: 1.4rem;
+  margin-bottom: 0.4rem;
+}
+
+// Links
+a {
+  color: var(--secondary);
+  text-decoration: none;
+  transition: color 0.15s ease, border-color 0.15s ease;
+
+  &:hover {
+    color: var(--tertiary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  &.internal {
+    background-color: var(--highlight);
+    color: var(--secondary);
+    padding: 0.1rem 0.35rem;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.15s ease, color 0.15s ease;
+
+    &:hover {
+      background-color: color-mix(in srgb, var(--secondary) 15%, transparent);
+      text-decoration: none;
+    }
+
+    &.broken {
+      color: var(--gray);
+      background-color: transparent;
+      text-decoration: line-through;
+      opacity: 0.7;
+    }
+  }
+}
+
+// Selection
+::selection {
+  background: color-mix(in srgb, var(--secondary) 25%, transparent);
+  color: var(--dark);
+}
+
+// Focus ring for accessibility
+*:focus-visible {
+  outline: 2px solid var(--secondary);
+  outline-offset: 2px;
+}
+
+// ============================================================================
+// 2. DIAGRAMD / TIKZ SVG ASSET STYLING
+// ============================================================================
+
+img[src*=".svg"],
+img[src*=".diagram-"],
+figure:has(> img) {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1.75rem auto;
+  padding: 0.75rem;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--lightgray);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+  box-sizing: border-box;
+}
+
+:root[saved-theme="dark"] img[src*=".diagram-"] {
+  background-color: #0f172a;
+  border-color: #1e293b;
+  filter: brightness(0.95) contrast(1.05);
+}
+
+// ============================================================================
+// 3. KATEX MATHEMATICAL FORMULA WRAPPERS
+// ============================================================================
+
+.katex-display {
+  display: block;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.75rem 0.5rem;
+  margin: 1.5rem 0;
+  text-align: center;
+  border-radius: 6px;
+  background-color: color-mix(in srgb, var(--highlight) 40%, transparent);
+  border: 1px solid color-mix(in srgb, var(--lightgray) 50%, transparent);
+  scrollbar-width: thin;
+}
+
+.katex {
+  font-size: 1.05em;
+  color: var(--dark);
+}
+
+// ============================================================================
+// 4. DATA TABLES
+// ============================================================================
+
+.table-container {
+  overflow-x: auto;
+  margin: 1.75rem 0;
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  background-color: var(--bg-surface);
+
+  & > table {
+    width: 100%;
+    margin: 0;
+    border-collapse: collapse;
+    font-size: 0.93rem;
+  }
+}
+
+th {
+  background-color: var(--highlight);
+  color: var(--dark);
+  font-weight: 600;
+  padding: 0.6rem 0.85rem;
+  border-bottom: 2px solid var(--lightgray);
+  text-align: left;
+}
+
+td {
+  padding: 0.55rem 0.85rem;
+  border-bottom: 1px solid var(--lightgray);
+  color: var(--darkgray);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:nth-child(even) {
+  background-color: color-mix(in srgb, var(--lightgray) 20%, transparent);
+}
+
+// ============================================================================
+// 5. CALLOUT REFINEMENTS
+// ============================================================================
+
+.callout {
+  border: 1px solid var(--lightgray);
+  border-left: 3.5px solid var(--secondary);
+  border-radius: 6px;
+  background-color: var(--highlight);
+  padding: 0.85rem 1.1rem;
+  margin: 1.5rem 0;
+  font-size: 0.96rem;
+
+  & > .callout-title {
+    font-weight: 650;
+    color: var(--dark);
+    font-size: 0.98rem;
+    margin-bottom: 0.4rem;
+  }
+
+  & > .callout-content {
+    color: var(--darkgray);
+
+    & > p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &[data-callout="info"] {
+    border-left-color: #0284c7;
+    background-color: color-mix(in srgb, #0284c7 8%, var(--light));
+  }
+
+  &[data-callout="note"] {
+    border-left-color: #64748b;
+    background-color: color-mix(in srgb, #64748b 7%, var(--light));
+  }
+
+  &[data-callout="warning"] {
+    border-left-color: #d97706;
+    background-color: color-mix(in srgb, #d97706 8%, var(--light));
+  }
+
+  &[data-callout="danger"] {
+    border-left-color: #dc2626;
+    background-color: color-mix(in srgb, #dc2626 8%, var(--light));
+  }
+
+  &[data-callout="example"] {
+    border-left-color: #8b5cf6;
+    background-color: color-mix(in srgb, #8b5cf6 8%, var(--light));
+  }
+
+  &[data-callout="cards"] {
+    border-left-color: var(--secondary);
+    background-color: var(--bg-surface);
+    border: 1px solid var(--lightgray);
+    border-left: 3.5px solid var(--secondary);
+  }
+}
+
+// ============================================================================
+// 6. MAP OF CONTENT (MOC) CARDS & HOMEPAGE UTILITIES
+// ============================================================================
+
+.moc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.25rem;
+  margin: 1.75rem 0;
+}
+
+.moc-card {
+  border: 1px solid var(--lightgray);
+  border-radius: 8px;
+  padding: 1.25rem;
+  background-color: var(--bg-surface);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover {
+    border-color: var(--secondary);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.06);
+  }
+
+  & h3 {
+    margin-top: 0;
+    margin-bottom: 0.4rem;
+    font-size: 1.12rem;
+
+    & a {
+      color: var(--dark);
+      text-decoration: none;
+
+      &:hover {
+        color: var(--secondary);
+      }
+    }
+  }
+
+  & p {
+    font-size: 0.92rem;
+    color: var(--darkgray);
+    margin-bottom: 0.6rem;
+    line-height: 1.55;
+  }
+
+  & .moc-links {
+    font-size: 0.88rem;
+    color: var(--gray);
+
+    & a {
+      font-weight: 500;
+    }
+  }
+}
+
+// ============================================================================
+// 7. NAVIGATION, EXPLORER & TABLE OF CONTENTS
+// ============================================================================
+
+// Header styling
+.page-header {
+  border-bottom: 1px solid var(--lightgray);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+// Breadcrumbs
+.breadcrumbs {
+  font-size: 0.88rem;
+  color: var(--gray);
+  margin-bottom: 0.75rem;
+
+  & a {
+    color: var(--gray);
+    font-weight: 400;
+
+    &:hover {
+      color: var(--secondary);
+      text-decoration: none;
+    }
+  }
+}
+
+// Content metadata strip
+.content-meta {
+  font-size: 0.88rem;
+  color: var(--gray);
+  margin-top: -0.25rem;
+  margin-bottom: 1.5rem;
+}
+
+// Table of Contents
+.toc {
+  font-size: 0.9rem;
+
+  & ul {
+    list-style: none;
+    padding-left: 0.75rem;
+    border-left: 1px solid var(--lightgray);
+    margin: 0.4rem 0;
+  }
+
+  & li {
+    margin: 0.35rem 0;
+    line-height: 1.4;
+  }
+
+  & a {
+    color: var(--darkgray);
+    font-weight: 400;
+
+    &:hover {
+      color: var(--secondary);
+      text-decoration: none;
+    }
+
+    &.in-view {
+      color: var(--secondary);
+      font-weight: 600;
+    }
+  }
+}
+
+// Explorer sidebar
+.explorer {
+  font-size: 0.92rem;
+
+  & .folder-container {
+    & div > a {
+      color: var(--darkgray);
+      font-weight: 500;
+
+      &:hover {
+        color: var(--secondary);
+      }
+    }
+  }
+}
+
+// ============================================================================
+// 8. BACKLINKS & FOOTER
+// ============================================================================
+
+.backlinks {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--lightgray);
+
+  & h3 {
+    font-size: 1.15rem;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+  }
+
+  & ul {
+    padding-left: 1.25rem;
+  }
+
+  & li {
+    margin: 0.4rem 0;
+    font-size: 0.95rem;
+  }
+}
+
+footer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--lightgray);
+  font-size: 0.88rem;
+  color: var(--gray);
+  text-align: center;
+}
