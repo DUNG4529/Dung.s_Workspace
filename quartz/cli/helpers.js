@@ -65,17 +65,18 @@ export async function popContentFolder(contentFolder) {
  * @param {string} linkPath  Path where the link is created
  */
 export function symlinkOrCopySync(target, linkPath) {
+  const absTarget = path.isAbsolute(target) ? target : path.resolve(process.cwd(), target)
+  const relTarget = path.relative(path.dirname(linkPath), absTarget)
   try {
-    fs.symlinkSync(target, linkPath, "dir")
+    fs.symlinkSync(relTarget, linkPath, "dir")
   } catch (err) {
     if (err.code === "EEXIST") return
     if (err.code === "EPERM" && process.platform === "win32") {
       try {
-        fs.symlinkSync(target, linkPath, "junction")
+        fs.symlinkSync(absTarget, linkPath, "junction")
         return
       } catch {
-        const resolvedTarget = path.resolve(path.dirname(linkPath), target)
-        fs.cpSync(resolvedTarget, linkPath, { recursive: true })
+        fs.cpSync(absTarget, linkPath, { recursive: true })
         return
       }
     }
@@ -90,20 +91,22 @@ export function symlinkOrCopySync(target, linkPath) {
  * @param {string} linkPath  Path where the link is created
  */
 export async function symlinkOrCopy(target, linkPath) {
+  const absTarget = path.isAbsolute(target) ? target : path.resolve(process.cwd(), target)
+  const relTarget = path.relative(path.dirname(linkPath), absTarget)
   try {
-    await fs.promises.symlink(target, linkPath, "dir")
+    await fs.promises.symlink(relTarget, linkPath, "dir")
   } catch (err) {
     if (err.code === "EEXIST") return
     if (err.code === "EPERM" && process.platform === "win32") {
       try {
-        await fs.promises.symlink(target, linkPath, "junction")
+        await fs.promises.symlink(absTarget, linkPath, "junction")
         return
       } catch {
-        const resolvedTarget = path.resolve(path.dirname(linkPath), target)
-        await fs.promises.cp(resolvedTarget, linkPath, { recursive: true })
+        await fs.promises.cp(absTarget, linkPath, { recursive: true })
         return
       }
     }
     throw err
   }
 }
+

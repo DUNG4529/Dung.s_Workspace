@@ -83,7 +83,7 @@ plugins:
     layout:
       position: right
       priority: 30
-  - source: github:quartz-community/crawl-links
+  - source: ./plugins/crawl-links
     enabled: true
     options:
       markdownLinkResolution: shortest

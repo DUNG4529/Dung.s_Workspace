@@ -1,0 +1,71 @@
+{
+  "name": "@quartz-community/crawl-links",
+  "version": "0.1.0",
+  "description": "Crawl links transformer plugin for Quartz with object[data] link resolution",
+  "type": "module",
+  "license": "MIT",
+  "author": "Quartz Community",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup"
+  },
+  "peerDependencies": {
+    "preact": "^10.0.0"
+  },
+  "dependencies": {
+    "@quartz-community/types": "github:quartz-community/types",
+    "@quartz-community/utils": "github:quartz-community/utils"
+  },
+  "quartz": {
+    "name": "crawl-links",
+    "displayName": "Crawl Links",
+    "category": "transformer",
+    "version": "1.0.0",
+    "quartzVersion": ">=5.0.0",
+    "dependencies": [],
+    "defaultOrder": 60,
+    "defaultEnabled": true,
+    "defaultOptions": {
+      "markdownLinkResolution": "absolute",
+      "prettyLinks": true,
+      "openLinksInNewTab": false,
+      "lazyLoad": false,
+      "externalLinkIcon": true,
+      "disableBrokenWikilinks": false
+    },
+    "optionSchema": {
+      "markdownLinkResolution": {
+        "type": "enum",
+        "values": [
+          "shortest",
+          "absolute",
+          "relative"
+        ]
+      },
+      "prettyLinks": {
+        "type": "boolean"
+      },
+      "openLinksInNewTab": {
+        "type": "boolean"
+      },
+      "lazyLoad": {
+        "type": "boolean"
+      },
+      "externalLinkIcon": {
+        "type": "boolean"
+      },
+      "disableBrokenWikilinks": {
+        "type": "boolean"
+      }
+    }
+  }
+}
