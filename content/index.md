@@ -2,136 +2,122 @@
 title: Dũng's Workspace
 ---
 
-<div class="hero-eyebrow">Personal Knowledge Library</div>
+<div class="hero-eyebrow">Personal Knowledge Garden</div>
 
 # 🌿 Dũng's Workspace
 
-<p class="hero-description">A quiet digital garden for learning, building, and connecting ideas across computer science, applied mathematics, and system design.</p>
+<p class="hero-description">A quiet digital library for study, projects, experiments, notes, and accumulated ideas.</p>
 
 <blockquote class="hero-epigraph"><p><em>“Learn deeply. Write clearly. Cultivate continuously.”</em></p></blockquote>
 
-<div class="archive-facts-strip">
-<div class="archive-fact"><span class="fact-num">01</span><div class="fact-content"><span class="fact-label">Collection</span><span class="fact-value">FPT University</span></div></div>
-<div class="archive-fact"><span class="fact-num">02</span><div class="fact-content"><span class="fact-label">Session</span><span class="fact-value">Summer 2026</span></div></div>
-<div class="archive-fact"><span class="fact-num">03</span><div class="fact-content"><span class="fact-label">Subjects</span><span class="fact-value">5 Disciplines</span></div></div>
-<div class="archive-fact"><span class="fact-num">04</span><div class="fact-content"><span class="fact-label">Notes</span><span class="fact-value">79 Curated Notes</span></div></div>
-</div>
-
 ---
 
-## 🗺️ Knowledge Atlas
+## 📁 Your Library
 
-<div class="library-collection accent-sapphire">
+<p class="section-lead">Your knowledge is organized as collections. Enter a collection to explore its folders and notes.</p>
 
-<div class="collection-header-row">
-<div class="collection-title-area">
-<span class="collection-kicker">01 / Primary Collection</span>
+<div class="folder-grid">
 
-### 🏛️ [[FPT University]]
-
-Undergraduate curriculum archives, computational coursework, and academic semester roadmaps.
+<a class="folder-card accent-sapphire is-primary" href="./fpt-university">
+<div class="folder-tab"></div>
+<div class="folder-card-body">
+<div class="folder-card-header">
+<span class="folder-icon">🏛️</span>
+<div class="folder-card-title-group">
+<h3 class="folder-card-title">FPT University</h3>
+<span class="folder-path">/FPT University</span>
 </div>
-<div class="collection-action-area">
-
-[[FPT University|Explore Archive →]]
-
+<span class="folder-status-pill is-active">Active Archive</span>
 </div>
-</div>
-
-<div class="session-divider">
-<span class="session-badge"><span class="session-dot"></span> Academic Session · Summer 2026</span>
-<span class="session-metrics">77 notes · 5 disciplines</span>
-</div>
-
-<div class="curriculum-ledger">
-
-<div class="ledger-row accent-aquamarine">
-<div class="ledger-meta">
-<span class="subject-code">MAS291</span>
-<span class="subject-notes-pill">39 notes</span>
-</div>
-<div class="ledger-content">
-<div class="subject-title">Probability & Statistics for IT</div>
-<div class="subject-desc">Statistical thinking, empirical models, random variables, parameter estimation, hypothesis testing, and regression analysis.</div>
-<div class="subject-entry">
-
-<span class="entry-label">Curriculum Entry:</span> [[FPT University/Summer 2026/MAS291/Material/1 - Statistical Thinking & The Engineering Method/1 - The Engineering Method and Statistical Thinking|Statistical Thinking & Engineering Method →]]
-
+<p class="folder-description">Undergraduate curriculum archives, computational coursework, and academic semester roadmaps.</p>
+<div class="folder-card-footer">
+<span class="folder-action-text">Explore Collection</span>
+<span class="folder-action-arrow">→</span>
 </div>
 </div>
+</a>
+
+<div class="folder-card accent-amethyst is-placeholder">
+<div class="folder-tab"></div>
+<div class="folder-card-body">
+<div class="folder-card-header">
+<span class="folder-icon">💻</span>
+<div class="folder-card-title-group">
+<h3 class="folder-card-title">Projects</h3>
+<span class="folder-path">/Projects</span>
 </div>
-
-<div class="ledger-row accent-emerald">
-<div class="ledger-meta">
-<span class="subject-code">DBI202</span>
-<span class="subject-notes-pill">13 notes</span>
+<span class="folder-status-pill is-planned">Planned</span>
 </div>
-<div class="ledger-content">
-<div class="subject-title">Introduction to Databases</div>
-<div class="subject-desc">Relational algebra, conceptual-to-physical ERD modeling, schema normalization, SQL implementation, and lab project synthesis.</div>
-<div class="subject-entry">
-
-<span class="entry-label">Curriculum Entry:</span> [[FPT University/Summer 2026/DBI202/CONVER FROM ERD TO RELATION MODEL|Relational Data Modeling & ERD →]]
-
+<p class="folder-description">Software systems, engineering tools, experimental builds, and open-source packages.</p>
+<div class="folder-card-footer">
+<span class="folder-action-text">In Preparation</span>
+<span class="folder-action-arrow">···</span>
 </div>
 </div>
 </div>
 
-<div class="ledger-row accent-amethyst">
-<div class="ledger-meta">
-<span class="subject-code">SWE202c</span>
-<span class="subject-notes-pill">5 notes</span>
+<div class="folder-card accent-aquamarine is-placeholder">
+<div class="folder-tab"></div>
+<div class="folder-card-body">
+<div class="folder-card-header">
+<span class="folder-icon">🔬</span>
+<div class="folder-card-title-group">
+<h3 class="folder-card-title">Research</h3>
+<span class="folder-path">/Research</span>
 </div>
-<div class="ledger-content">
-<div class="subject-title">Introduction to Software Engineering</div>
-<div class="subject-desc">Software development lifecycle (SDLC), requirement engineering, specification modeling, and UML use case diagrams.</div>
-<div class="subject-entry">
-
-<span class="entry-label">Curriculum Entry:</span> [[FPT University/Summer 2026/SWE202c/Learn/Kiến thức môn|Software Engineering Core Concepts →]]
-
+<span class="folder-status-pill is-planned">Planned</span>
 </div>
-</div>
-</div>
-
-<div class="ledger-row accent-topaz">
-<div class="ledger-meta">
-<span class="subject-code">LAB211</span>
-<span class="subject-notes-pill">7 notes</span>
-</div>
-<div class="ledger-content">
-<div class="subject-title">OOP with Java Lab</div>
-<div class="subject-desc">Object-oriented architecture, clean code principles, modular system design, and practical software team project workflows.</div>
-<div class="subject-entry">
-
-<span class="entry-label">Curriculum Entry:</span> [[FPT University/Summer 2026/LAB211/Project 02/Project 02 Football Club & Player Management|Football Club Management Project →]]
-
+<p class="folder-description">Research notes, technical literature syntheses, deep dives, and academic investigations.</p>
+<div class="folder-card-footer">
+<span class="folder-action-text">In Preparation</span>
+<span class="folder-action-arrow">···</span>
 </div>
 </div>
 </div>
 
-<div class="ledger-row accent-rose">
-<div class="ledger-meta">
-<span class="subject-code">JPD113</span>
-<span class="subject-notes-pill">13 notes</span>
+<div class="folder-card accent-emerald is-placeholder">
+<div class="folder-tab"></div>
+<div class="folder-card-body">
+<div class="folder-card-header">
+<span class="folder-icon">📐</span>
+<div class="folder-card-title-group">
+<h3 class="folder-card-title">Mathematics</h3>
+<span class="folder-path">/Mathematics</span>
 </div>
-<div class="ledger-content">
-<div class="subject-title">Elementary Japanese 1-A1</div>
-<div class="subject-desc">Grammar foundations, sentence patterns, kana & kanji script drills, conversational structures, and cultural knowledge base.</div>
-<div class="subject-entry">
+<span class="folder-status-pill is-planned">Planned</span>
+</div>
+<p class="folder-description">Foundations of computing, probability theory, statistics, linear algebra, and discrete mathematics.</p>
+<div class="folder-card-footer">
+<span class="folder-action-text">In Preparation</span>
+<span class="folder-action-arrow">···</span>
+</div>
+</div>
+</div>
 
-<span class="entry-label">Curriculum Entry:</span> [[FPT University/Summer 2026/JPD113/Tổng Hợp Kiến Thức|Japanese Knowledge Summary →]]
-
+<div class="folder-card accent-rose is-placeholder">
+<div class="folder-tab"></div>
+<div class="folder-card-body">
+<div class="folder-card-header">
+<span class="folder-icon">📚</span>
+<div class="folder-card-title-group">
+<h3 class="folder-card-title">Books</h3>
+<span class="folder-path">/Books</span>
+</div>
+<span class="folder-status-pill is-planned">Planned</span>
+</div>
+<p class="folder-description">Distilled ideas, reading marginalia, book summaries, and cross-domain knowledge notes.</p>
+<div class="folder-card-footer">
+<span class="folder-action-text">In Preparation</span>
+<span class="folder-action-arrow">···</span>
 </div>
 </div>
-</div>
-
 </div>
 
 </div>
 
 ---
 
-## 🧭 Garden Topology & Navigation Guide
+## 🧭 Garden Navigation Guide
 
 <div class="topology-ledger">
 
@@ -159,7 +145,7 @@ Undergraduate curriculum archives, computational coursework, and academic semest
 <span class="topology-title">Contextual Wikilinks</span>
 <span class="topology-shortcut">Hover Link</span>
 </div>
-<p class="topology-text">Hover over any internal link in the garden to preview note excerpts and formulas without losing your current reading context.</p>
+<p class="topology-text">Hover over any internal link in the garden to preview note excerpts and formulas without losing your reading context.</p>
 </div>
 
 <div class="topology-item">
@@ -172,5 +158,3 @@ Undergraduate curriculum archives, computational coursework, and academic semest
 </div>
 
 </div>
-
-
