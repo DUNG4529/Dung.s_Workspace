@@ -37,7 +37,7 @@ title: Dũng's Workspace
 </div>
 </a>
 
-<div class="folder-card accent-amethyst is-placeholder">
+<div class="folder-card accent-sapphire is-placeholder">
 <div class="folder-tab"></div>
 <div class="folder-card-body">
 <div class="folder-card-header">
@@ -56,7 +56,7 @@ title: Dũng's Workspace
 </div>
 </div>
 
-<div class="folder-card accent-aquamarine is-placeholder">
+<div class="folder-card accent-sapphire is-placeholder">
 <div class="folder-tab"></div>
 <div class="folder-card-body">
 <div class="folder-card-header">
@@ -75,7 +75,7 @@ title: Dũng's Workspace
 </div>
 </div>
 
-<div class="folder-card accent-emerald is-placeholder">
+<div class="folder-card accent-sapphire is-placeholder">
 <div class="folder-tab"></div>
 <div class="folder-card-body">
 <div class="folder-card-header">
@@ -94,7 +94,7 @@ title: Dũng's Workspace
 </div>
 </div>
 
-<div class="folder-card accent-rose is-placeholder">
+<div class="folder-card accent-sapphire is-placeholder">
 <div class="folder-tab"></div>
 <div class="folder-card-body">
 <div class="folder-card-header">
@@ -117,7 +117,7 @@ title: Dũng's Workspace
 
 ---
 
-## 🧭 Garden Navigation Guide
+## 🧭 Library Tools & Reference
 
 <div class="topology-ledger">
 
