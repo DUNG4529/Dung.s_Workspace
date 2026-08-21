@@ -1,12 +1,12 @@
 @use "./variables.scss" as *;
 
 // ============================================================================
-// DŨNG'S DIGITAL GARDEN — "THE OPALITE ACADEMIC ATELIER"
+// OPALITE KNOWLEDGE GARDEN — DŨNG'S WORKSPACE
 // ============================================================================
 
 :root {
   /* -------------------------------------------------------------------------
-   * Canvas & Atmospheric Backgrounds (Luminous Opalite)
+   * Canvas & Atmospheric Backgrounds (Luminous Morning Paper)
    * ----------------------------------------------------------------------- */
   --bg-canvas: #f3f8fc;
   --bg-surface: #ffffff;
@@ -23,47 +23,47 @@
   --text-subtle: #8fa3b8;
 
   /* -------------------------------------------------------------------------
-   * Opalite / Mineral Spectrum (Pastel & Desaturated)
+   * Semantic Mineral Spectrum (Role-Based, Not Subject-Based)
    * ----------------------------------------------------------------------- */
-  /* Blue / Sapphire (Primary) */
+  /* Sapphire (Primary Identity, Universal Navigation, Active States, Core Links) */
   --opal-blue: #2563eb;
   --opal-blue-hover: #1d4ed8;
   --opal-blue-soft: #3b82f6;
   --opal-blue-bg: #eff6ff;
   --opal-blue-border: #bfdbfe;
 
-  /* Cyan / Aquamarine (Probability & Statistics, Info) */
+  /* Aquamarine (Informational Context, Neutral Explanations) */
   --opal-cyan: #0891b2;
   --opal-cyan-soft: #06b6d4;
   --opal-cyan-bg: #f0fdfa;
   --opal-cyan-border: #99f6e4;
 
-  /* Violet / Amethyst (Software Engineering, Example, Books) */
+  /* Amethyst (Conceptual Depth, Abstract Models, Marginalia) */
   --opal-violet: #7c3aed;
   --opal-violet-soft: #8b5cf6;
   --opal-violet-bg: #f5f3ff;
   --opal-violet-border: #ddd6fe;
 
-  /* Mint / Emerald (Database Systems, Tip, Success) */
+  /* Emerald (Positive Confirmation, Verified Proofs, Growth, Tips) */
   --opal-mint: #059669;
   --opal-mint-soft: #10b981;
   --opal-mint-bg: #ecfdf5;
   --opal-mint-border: #a7f3d0;
 
-  /* Amber / Topaz (Java & Programming, Warning) */
+  /* Topaz (Attention, Pending Synthesis, Cautionary Alerts) */
   --opal-amber: #d97706;
   --opal-amber-soft: #f59e0b;
   --opal-amber-bg: #fffbeb;
   --opal-amber-border: #fde68a;
 
-  /* Rose / Morganite (Reflections, Danger) */
+  /* Morganite (Critical Alerts, Conflicting Arguments, Danger) */
   --opal-rose: #e11d48;
   --opal-rose-soft: #f43f5e;
   --opal-rose-bg: #fff1f2;
   --opal-rose-border: #fecdd3;
 
   /* -------------------------------------------------------------------------
-   * Borders & Dividers
+   * Structural Borders & Dividers
    * ----------------------------------------------------------------------- */
   --border-card: #dce8f3;
   --border-divider: #cbdbe8;
@@ -79,7 +79,9 @@
 }
 
 :root[saved-theme="dark"] {
-  /* Dark Mode Opalite Night */
+  /* -------------------------------------------------------------------------
+   * Dark Mode (Quiet Midnight Library)
+   * ----------------------------------------------------------------------- */
   --bg-canvas: #0a1220;
   --bg-surface: #111b2e;
   --bg-surface-elevated: #16243d;
@@ -94,32 +96,32 @@
   --opal-blue: #60a5fa;
   --opal-blue-hover: #93c5fd;
   --opal-blue-soft: #3b82f6;
-  --opal-blue-bg: #17255480;
+  --opal-blue-bg: rgba(23, 37, 84, 0.5);
   --opal-blue-border: #1e40af;
 
   --opal-cyan: #38bdf8;
   --opal-cyan-soft: #22d3ee;
-  --opal-cyan-bg: #134e4a60;
+  --opal-cyan-bg: rgba(19, 78, 74, 0.4);
   --opal-cyan-border: #115e59;
 
   --opal-violet: #a78bfa;
   --opal-violet-soft: #c084fc;
-  --opal-violet-bg: #3b076460;
+  --opal-violet-bg: rgba(59, 7, 100, 0.4);
   --opal-violet-border: #581c87;
 
   --opal-mint: #34d399;
   --opal-mint-soft: #4ade80;
-  --opal-mint-bg: #064e3b60;
+  --opal-mint-bg: rgba(6, 78, 59, 0.4);
   --opal-mint-border: #065f46;
 
   --opal-amber: #fbbf24;
   --opal-amber-soft: #fcd34d;
-  --opal-amber-bg: #451a0360;
+  --opal-amber-bg: rgba(69, 26, 3, 0.4);
   --opal-amber-border: #78350f;
 
   --opal-rose: #fb7185;
   --opal-rose-soft: #fda4af;
-  --opal-rose-bg: #4c051960;
+  --opal-rose-bg: rgba(76, 5, 25, 0.4);
   --opal-rose-border: #881337;
 
   --border-card: #18253a;
@@ -141,8 +143,8 @@ body {
   background-image:
     radial-gradient(at 0% 0%, rgba(219, 234, 254, 0.45) 0px, transparent 58%),
     radial-gradient(at 100% 0%, rgba(237, 233, 254, 0.38) 0px, transparent 52%),
-    radial-gradient(at 50% 100%, rgba(207, 250, 254, 0.30) 0px, transparent 62%),
-    radial-gradient(at 50% 30%, rgba(255, 255, 255, 0.70) 0px, transparent 70%);
+    radial-gradient(at 50% 100%, rgba(207, 250, 254, 0.3) 0px, transparent 62%),
+    radial-gradient(at 50% 30%, rgba(255, 255, 255, 0.7) 0px, transparent 70%);
   background-attachment: fixed;
   color: var(--darkgray);
   font-family: var(--bodyFont);
@@ -155,9 +157,9 @@ body {
 :root[saved-theme="dark"] body {
   background-image:
     radial-gradient(at 0% 0%, rgba(30, 58, 138, 0.25) 0px, transparent 58%),
-    radial-gradient(at 100% 0%, rgba(88, 28, 135, 0.20) 0px, transparent 52%),
+    radial-gradient(at 100% 0%, rgba(88, 28, 135, 0.2) 0px, transparent 52%),
     radial-gradient(at 50% 100%, rgba(8, 145, 178, 0.16) 0px, transparent 62%),
-    radial-gradient(at 50% 30%, rgba(17, 27, 46, 0.60) 0px, transparent 70%);
+    radial-gradient(at 50% 30%, rgba(17, 27, 46, 0.6) 0px, transparent 70%);
 }
 
 article {
@@ -230,7 +232,12 @@ article {
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--headerFont);
   color: var(--dark);
   letter-spacing: -0.01em;
@@ -245,6 +252,19 @@ h2 {
   border-bottom: 1px solid var(--border-card);
 }
 
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--border-card) 20%,
+    var(--border-card) 80%,
+    transparent 100%
+  );
+  margin: 2.25rem 0;
+}
+
 h3 {
   font-size: 1.18rem;
   font-weight: 600;
@@ -252,7 +272,9 @@ h3 {
   margin-bottom: 0.5rem;
 }
 
-h4, h5, h6 {
+h4,
+h5,
+h6 {
   font-size: 1.02rem;
   font-weight: 600;
   margin-top: 1.4rem;
@@ -263,7 +285,9 @@ h4, h5, h6 {
 a {
   color: var(--secondary);
   text-decoration: none;
-  transition: color 0.15s ease, border-color 0.15s ease;
+  transition:
+    color 0.15s ease,
+    border-color 0.15s ease;
 
   &:hover {
     color: var(--tertiary);
@@ -278,7 +302,10 @@ a {
     border-radius: 4px;
     font-weight: 500;
     border: 1px solid transparent;
-    transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+    transition:
+      background-color 0.15s ease,
+      color 0.15s ease,
+      border-color 0.15s ease;
 
     &:hover {
       background-color: color-mix(in srgb, var(--secondary) 14%, var(--bg-surface));
@@ -488,10 +515,10 @@ tr:nth-child(even) {
   line-height: 1.62;
 }
 
-/* Folder Collections Grid */
+/* Adaptive Folder Collections Grid */
 .folder-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.45rem;
   margin: 1.75rem 0 3rem 0;
   position: relative;
@@ -506,7 +533,11 @@ a.folder-card.internal {
   --card-accent-border: var(--opal-blue-border);
 
   position: relative;
-  background: linear-gradient(180deg, var(--bg-surface) 0%, color-mix(in srgb, var(--bg-subtle) 30%, var(--bg-surface)) 100%);
+  background: linear-gradient(
+    180deg,
+    var(--bg-surface) 0%,
+    color-mix(in srgb, var(--bg-subtle) 30%, var(--bg-surface)) 100%
+  );
   border: 1px solid var(--border-card);
   border-left: 3.5px solid var(--card-accent);
   border-radius: 8px;
@@ -516,13 +547,15 @@ a.folder-card.internal {
   color: inherit;
   text-decoration: none;
   font-weight: normal;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.85),
-              0 2px 8px -2px rgba(15, 29, 46, 0.035),
-              0 1px 3px rgba(15, 29, 46, 0.02);
-  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
-              box-shadow 0.22s cubic-bezier(0.16, 1, 0.3, 1),
-              border-color 0.2s ease,
-              background-color 0.2s ease;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.85),
+    0 2px 8px -2px rgba(15, 29, 46, 0.035),
+    0 1px 3px rgba(15, 29, 46, 0.02);
+  transition:
+    transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.2s ease,
+    background-color 0.2s ease;
   overflow: visible;
 
   /* Layered archival jacket effect (physical back leaf) */
@@ -533,16 +566,17 @@ a.folder-card.internal {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--bg-surface);
-    border: 1px solid var(--border-card);
+    background-color: color-mix(in srgb, var(--bg-surface) 94%, var(--bg-canvas));
+    border: 1px solid color-mix(in srgb, var(--border-card) 85%, transparent);
     border-radius: 8px;
     z-index: -1;
     transform: translate(3px, -3px);
-    opacity: 0.4;
+    opacity: 0.45;
     pointer-events: none;
-    transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
-                opacity 0.22s ease,
-                border-color 0.2s ease;
+    transition:
+      transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+      opacity 0.22s ease,
+      border-color 0.2s ease;
   }
 
   /* Archival folder tab notch along top edge */
@@ -554,22 +588,28 @@ a.folder-card.internal {
     height: 4px;
     background-color: var(--card-accent);
     border-radius: 0 0 3px 3px;
-    opacity: 0.9;
+    opacity: 0.95;
     box-shadow: 0 1px 3px color-mix(in srgb, var(--card-accent) 25%, transparent);
-    transition: width 0.24s cubic-bezier(0.16, 1, 0.3, 1),
-                opacity 0.2s ease,
-                background-color 0.2s ease;
+    transition:
+      width 0.24s cubic-bezier(0.16, 1, 0.3, 1),
+      opacity 0.2s ease,
+      background-color 0.2s ease;
   }
 
   &.is-primary {
     grid-column: 1 / -1;
-    background: linear-gradient(135deg, var(--bg-surface) 0%, color-mix(in srgb, var(--card-accent-bg) 38%, var(--bg-surface)) 100%);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9),
-                0 3px 14px -2px rgba(15, 29, 46, 0.045),
-                0 1px 4px rgba(15, 29, 46, 0.02);
+    background: linear-gradient(
+      135deg,
+      var(--bg-surface) 0%,
+      color-mix(in srgb, var(--card-accent-bg) 38%, var(--bg-surface)) 100%
+    );
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.9),
+      0 3px 14px -2px rgba(15, 29, 46, 0.045),
+      0 1px 4px rgba(15, 29, 46, 0.02);
 
     &::before {
-      opacity: 0.55;
+      opacity: 0.6;
       transform: translate(3.5px, -3.5px);
       border-color: color-mix(in srgb, var(--card-accent-border) 40%, var(--border-card));
     }
@@ -619,15 +659,16 @@ a.folder-card.internal {
   /* Active Interactive Card Hover */
   &:not(.is-placeholder):hover {
     transform: translateY(-2px);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.95),
-                0 8px 24px -4px rgba(15, 29, 46, 0.065),
-                0 3px 8px -1px color-mix(in srgb, var(--card-accent) 15%, transparent);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.95),
+      0 8px 24px -4px rgba(15, 29, 46, 0.065),
+      0 3px 8px -1px color-mix(in srgb, var(--card-accent) 15%, transparent);
     border-color: color-mix(in srgb, var(--card-accent) 35%, var(--border-card));
     text-decoration: none;
 
     &::before {
-      transform: translate(4px, -4px);
-      opacity: 0.7;
+      transform: translate(4.5px, -4.5px);
+      opacity: 0.75;
       border-color: color-mix(in srgb, var(--card-accent) 35%, var(--border-card));
     }
 
@@ -681,8 +722,9 @@ a.folder-card.internal {
     &:hover {
       opacity: 0.98;
       border-color: var(--border-divider);
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8),
-                  0 4px 14px -3px rgba(15, 29, 46, 0.04);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.8),
+        0 4px 14px -3px rgba(15, 29, 46, 0.04);
       transform: translateY(-1px);
 
       &::before {
@@ -698,9 +740,14 @@ a.folder-card.internal {
   .folder-card,
   a.folder-card,
   a.folder-card.internal {
-    background: linear-gradient(180deg, var(--bg-surface) 0%, color-mix(in srgb, var(--bg-subtle) 40%, var(--bg-surface)) 100%);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06),
-                0 2px 8px -2px rgba(0, 0, 0, 0.35);
+    background: linear-gradient(
+      180deg,
+      var(--bg-surface) 0%,
+      color-mix(in srgb, var(--bg-subtle) 40%, var(--bg-surface)) 100%
+    );
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.06),
+      0 2px 8px -2px rgba(0, 0, 0, 0.35);
 
     &::before {
       background-color: color-mix(in srgb, var(--bg-surface) 75%, var(--bg-canvas));
@@ -709,18 +756,24 @@ a.folder-card.internal {
     }
 
     &.is-primary {
-      background: linear-gradient(135deg, var(--bg-surface) 0%, color-mix(in srgb, var(--card-accent-bg) 45%, var(--bg-surface)) 100%);
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08),
-                  0 4px 16px -2px rgba(0, 0, 0, 0.45);
+      background: linear-gradient(
+        135deg,
+        var(--bg-surface) 0%,
+        color-mix(in srgb, var(--card-accent-bg) 45%, var(--bg-surface)) 100%
+      );
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.08),
+        0 4px 16px -2px rgba(0, 0, 0, 0.45);
     }
 
     &:not(.is-placeholder):hover {
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1),
-                  0 8px 24px -4px rgba(0, 0, 0, 0.5),
-                  0 2px 8px color-mix(in srgb, var(--card-accent) 20%, transparent);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        0 8px 24px -4px rgba(0, 0, 0, 0.5),
+        0 2px 8px color-mix(in srgb, var(--card-accent) 20%, transparent);
 
       &::before {
-        opacity: 0.75;
+        opacity: 0.8;
       }
     }
 
@@ -728,8 +781,9 @@ a.folder-card.internal {
       background: color-mix(in srgb, var(--bg-surface) 80%, var(--bg-canvas));
 
       &:hover {
-        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08),
-                    0 4px 14px -3px rgba(0, 0, 0, 0.4);
+        box-shadow:
+          inset 0 1px 0 rgba(255, 255, 255, 0.08),
+          0 4px 14px -3px rgba(0, 0, 0, 0.4);
       }
     }
   }
@@ -771,20 +825,17 @@ a.folder-card.internal {
   margin: 0 0 0.15rem 0;
   line-height: 1.3;
   letter-spacing: -0.01em;
+  transition: color 0.18s ease;
+
+  /* In folder cards, heading anchors are hidden/inert so the card wrapper link handles navigation */
+  & a[role="anchor"] {
+    display: none;
+  }
 
   & a {
-    color: var(--dark);
+    color: inherit;
     text-decoration: none;
-    transition: color 0.18s ease;
-
-    /* Stretched link so the entire folder card is clickable */
-    &::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      z-index: 2;
-      border-radius: inherit;
-    }
+    pointer-events: none;
   }
 }
 
@@ -814,6 +865,19 @@ a.folder-card.internal {
     background-color: var(--opal-blue-bg);
     color: var(--opal-blue);
     border-color: var(--opal-blue-border);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: var(--opal-blue);
+      box-shadow: 0 0 4px var(--opal-blue);
+    }
   }
 
   &.is-planned {
@@ -847,7 +911,9 @@ a.folder-card.internal {
   & .folder-action-arrow {
     font-family: var(--codeFont);
     display: inline-block;
-    transition: transform 0.2s ease, color 0.2s ease;
+    transition:
+      transform 0.2s ease,
+      color 0.2s ease;
   }
 }
 
@@ -864,14 +930,19 @@ a.folder-card.internal {
   border: 1px solid var(--border-card);
   border-radius: 6px;
   padding: 1.15rem 1.25rem;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7),
-              0 1px 3px rgba(15, 29, 46, 0.02);
-  transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.7),
+    0 1px 3px rgba(15, 29, 46, 0.02);
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease,
+    transform 0.18s ease;
 
   &:hover {
     border-color: var(--border-divider);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9),
-                0 4px 12px rgba(15, 29, 46, 0.035);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.9),
+      0 4px 12px rgba(15, 29, 46, 0.035);
     transform: translateY(-1px);
   }
 
@@ -916,12 +987,14 @@ a.folder-card.internal {
 }
 
 :root[saved-theme="dark"] .topology-item {
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05),
-              0 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 1px 3px rgba(0, 0, 0, 0.2);
 
   &:hover {
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08),
-                0 4px 12px rgba(0, 0, 0, 0.35);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.08),
+      0 4px 12px rgba(0, 0, 0, 0.35);
   }
 }
 
@@ -1024,6 +1097,41 @@ a.folder-card.internal {
       }
     }
   }
+
+  & a.nav-file-title.active,
+  & a.nav-file-title.is-active,
+  & li.active > a,
+  & li.is-active > a {
+    color: var(--secondary);
+    font-weight: 600;
+    border-left: 2px solid var(--opal-blue);
+    padding-left: 0.35rem;
+    margin-left: -0.35rem;
+    background-color: var(--opal-blue-bg);
+    border-radius: 0 4px 4px 0;
+  }
+}
+
+// Popover Preview Card Styling
+.popover {
+  & > .popover-inner {
+    background-color: var(--bg-surface-elevated);
+    border: 1px solid var(--border-card);
+    border-radius: 8px;
+    box-shadow:
+      0 12px 32px -4px rgba(15, 29, 46, 0.12),
+      0 4px 12px rgba(15, 29, 46, 0.06);
+    font-family: var(--bodyFont);
+    color: var(--darkgray);
+  }
+}
+
+:root[saved-theme="dark"] .popover > .popover-inner {
+  background-color: var(--bg-surface-elevated);
+  border-color: var(--border-card);
+  box-shadow:
+    0 12px 32px -4px rgba(0, 0, 0, 0.6),
+    0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 // ============================================================================
