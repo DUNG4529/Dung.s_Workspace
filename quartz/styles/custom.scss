@@ -271,13 +271,19 @@ article {
 
   & code:not(pre code) {
     font-family: var(--codeFont);
-    font-size: 0.88em;
-    padding: 0.15em 0.38em;
+    font-size: 0.92em;
+    padding: 0.15em 0.4em;
     border-radius: 4px;
-    background-color: var(--highlight);
+    background-color: color-mix(in srgb, var(--opal-blue-bg) 60%, var(--bg-surface));
     border: 1px solid var(--border-card);
     color: var(--dark);
   }
+}
+
+:root[saved-theme="dark"] article code:not(pre code) {
+  background-color: var(--bg-subtle);
+  border-color: var(--border-card);
+  color: var(--text-body);
 }
 
 /* Hero Section Refinements */
@@ -510,6 +516,201 @@ a {
 }
 
 // ============================================================================
+// 1.1 CODE BLOCKS & TECHNICAL PROSE
+// ============================================================================
+
+figure[data-rehype-pretty-code-figure] {
+  margin-block: 1.6rem;
+  margin-inline: 0;
+  position: relative;
+
+  & > [data-rehype-pretty-code-title] {
+    font-family: var(--codeFont);
+    font-size: 0.76rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.28rem 0.85rem;
+    background-color: color-mix(in srgb, var(--bg-surface) 90%, var(--bg-subtle));
+    border: 1px solid var(--border-card);
+    border-bottom: none;
+    border-radius: 6px 6px 0 0;
+    width: fit-content;
+    color: var(--text-muted);
+    margin-bottom: 0;
+    user-select: none;
+  }
+
+  & > pre {
+    margin: 0;
+  }
+}
+
+figure[data-rehype-pretty-code-figure]:has(> [data-rehype-pretty-code-title]) > pre {
+  border-top-left-radius: 0;
+}
+
+pre {
+  font-family: var(--codeFont);
+  padding: 0.85rem 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  border: 1px solid var(--border-card);
+  background-color: color-mix(in srgb, var(--bg-subtle) 40%, var(--bg-surface));
+  color: var(--dark);
+  position: relative;
+  margin-block: 1.6rem;
+  margin-inline: 0;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-card) transparent;
+  box-sizing: border-box;
+
+  &::-webkit-scrollbar {
+    height: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--border-card);
+    border-radius: 3px;
+  }
+
+  // Preserve clean background and borders for Mermaid diagrams
+  &:has(> code.mermaid),
+  &.mermaid {
+    border: none;
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+    overflow-x: visible;
+  }
+
+  & > code {
+    background: none;
+    padding: 0;
+    font-size: 0.88rem;
+    line-height: 1.62;
+    counter-reset: line;
+    counter-increment: line 0;
+    display: grid;
+    overflow-x: auto;
+    tab-size: 2;
+
+    // Highlighted characters
+    & [data-highlighted-chars] {
+      background-color: var(--highlight);
+      border-radius: 3px;
+      padding: 0.1em 0.25em;
+    }
+
+    // Code lines
+    & > [data-line] {
+      padding: 0 0.35rem;
+      box-sizing: border-box;
+      border-left: 3px solid transparent;
+
+      // Highlighted lines
+      &[data-highlighted-line] {
+        background-color: color-mix(in srgb, var(--opal-blue-bg) 80%, transparent);
+        border-left: 3px solid var(--opal-blue);
+      }
+
+      // Line numbers
+      &::before {
+        content: counter(line);
+        counter-increment: line;
+        width: 1.25rem;
+        margin-right: 0.85rem;
+        display: inline-block;
+        text-align: right;
+        color: var(--text-subtle);
+        opacity: 0.65;
+        user-select: none;
+      }
+    }
+
+    &[data-line-numbers-max-digits="2"] > [data-line]::before {
+      width: 1.85rem;
+    }
+
+    &[data-line-numbers-max-digits="3"] > [data-line]::before {
+      width: 2.45rem;
+    }
+  }
+
+  // Code block copy button
+  & .clipboard-button,
+  & button[data-clipboard],
+  & button.copy-button {
+    position: absolute;
+    top: 0.55rem;
+    right: 0.55rem;
+    padding: 0.25rem 0.55rem;
+    font-family: var(--codeFont);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    background-color: color-mix(in srgb, var(--bg-surface) 85%, transparent);
+    border: 1px solid var(--border-card);
+    border-radius: 4px;
+    opacity: 0.75;
+    cursor: pointer;
+    transition:
+      opacity 0.18s cubic-bezier(0.16, 1, 0.3, 1),
+      color 0.18s cubic-bezier(0.16, 1, 0.3, 1),
+      background-color 0.18s cubic-bezier(0.16, 1, 0.3, 1),
+      border-color 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+
+    &:hover {
+      opacity: 1;
+      color: var(--secondary);
+      background-color: var(--opal-blue-bg);
+      border-color: var(--opal-blue-border);
+    }
+  }
+}
+
+// Dark Mode Overrides for Code Blocks
+:root[saved-theme="dark"] {
+  figure[data-rehype-pretty-code-figure] > [data-rehype-pretty-code-title] {
+    background-color: color-mix(in srgb, var(--bg-surface) 90%, var(--bg-canvas));
+    border-color: var(--border-card);
+    color: var(--text-muted);
+  }
+
+  pre {
+    background-color: #0c1524;
+    border-color: var(--border-card);
+    color: var(--darkgray);
+
+    & > code > [data-line] {
+      &[data-highlighted-line] {
+        background-color: color-mix(in srgb, var(--opal-blue-bg) 40%, transparent);
+        border-left-color: var(--opal-blue);
+      }
+
+      &::before {
+        color: var(--text-subtle);
+        opacity: 0.55;
+      }
+    }
+
+    & .clipboard-button,
+    & button[data-clipboard],
+    & button.copy-button {
+      background-color: color-mix(in srgb, var(--bg-surface-elevated) 85%, transparent);
+      border-color: var(--border-card);
+      color: var(--text-muted);
+
+      &:hover {
+        color: var(--secondary);
+        background-color: var(--opal-blue-bg);
+        border-color: var(--opal-blue-border);
+      }
+    }
+  }
+}
+
+// ============================================================================
 // 2. DIAGRAMD / TIKZ SVG ASSET FRAMING
 // ============================================================================
 
@@ -557,45 +758,115 @@ figure:has(> img) {
 }
 
 // ============================================================================
-// 4. DATA TABLES
+// 4. DATA TABLES & SCHOLARLY DATA SHEETS
 // ============================================================================
 
 .table-container {
   overflow-x: auto;
-  margin: 1.75rem 0;
+  margin-block: 1.6rem 1.75rem;
+  margin-inline: 0;
   border: 1px solid var(--border-card);
   border-radius: 6px;
   background-color: var(--bg-surface);
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-card) transparent;
+
+  &::-webkit-scrollbar {
+    height: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--border-card);
+    border-radius: 3px;
+  }
 
   & > table {
     width: 100%;
     margin: 0;
     border-collapse: collapse;
-    font-size: 0.93rem;
+    font-size: 0.94rem;
+    line-height: 1.62;
+    text-align: left;
+
+    & caption {
+      caption-side: top;
+      font-size: 0.86rem;
+      font-style: italic;
+      color: var(--text-muted);
+      padding: 0.45rem 0.85rem;
+      text-align: left;
+    }
+
+    & th {
+      background-color: color-mix(in srgb, var(--opal-blue-bg) 55%, var(--bg-surface));
+      color: var(--dark);
+      font-weight: 600;
+      padding: 0.62rem 0.85rem;
+      border-bottom: 1.5px solid var(--border-card);
+      text-align: left;
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+    }
+
+    & td {
+      padding: 0.55rem 0.85rem;
+      border-bottom: 1px solid var(--border-card);
+      color: var(--text-body);
+      vertical-align: top;
+    }
+
+    & tbody tr {
+      transition: background-color 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+
+      &:nth-child(even) {
+        background-color: color-mix(in srgb, var(--bg-subtle) 35%, transparent);
+      }
+
+      &:hover {
+        background-color: color-mix(in srgb, var(--opal-blue-bg) 50%, var(--bg-surface));
+      }
+
+      &:last-child td {
+        border-bottom: none;
+      }
+    }
+
+    // Inline code in tables
+    & code:not(pre code) {
+      font-size: 0.88em;
+      padding: 0.1em 0.35em;
+    }
   }
 }
 
-th {
-  background-color: var(--highlight);
-  color: var(--dark);
-  font-weight: 600;
-  padding: 0.65rem 0.9rem;
-  border-bottom: 2px solid var(--border-card);
-  text-align: left;
-}
+// Dark Mode Overrides for Tables
+:root[saved-theme="dark"] .table-container {
+  background-color: var(--bg-surface);
+  border-color: var(--border-card);
 
-td {
-  padding: 0.55rem 0.9rem;
-  border-bottom: 1px solid var(--border-card);
-  color: var(--darkgray);
-}
+  & > table {
+    & th {
+      background-color: color-mix(in srgb, var(--opal-blue-bg) 45%, var(--bg-surface-elevated));
+      color: var(--dark);
+      border-bottom-color: var(--border-card);
+    }
 
-tr:last-child td {
-  border-bottom: none;
-}
+    & td {
+      color: var(--text-body);
+      border-bottom-color: var(--border-card);
+    }
 
-tr:nth-child(even) {
-  background-color: color-mix(in srgb, var(--bg-subtle) 40%, transparent);
+    & tbody tr {
+      &:nth-child(even) {
+        background-color: color-mix(in srgb, var(--bg-subtle) 30%, transparent);
+      }
+
+      &:hover {
+        background-color: color-mix(in srgb, var(--opal-blue-bg) 35%, var(--bg-surface));
+      }
+    }
+  }
 }
 
 // ============================================================================
@@ -1208,6 +1479,19 @@ a.folder-card.internal {
 
   .folder-card-title {
     font-size: 1.12rem;
+  }
+
+  .table-container {
+    margin-block: 1.25rem;
+
+    & > table {
+      font-size: 0.88rem;
+
+      & th,
+      & td {
+        padding: 0.48rem 0.65rem;
+      }
+    }
   }
 }
 
