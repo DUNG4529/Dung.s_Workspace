@@ -5,7 +5,7 @@ import path from "path"
 import os from "os"
 import { Assets } from "./assets"
 import { BuildCtx } from "../../util/ctx"
-import { FilePath, FullSlug } from "../../util/path"
+import { FilePath } from "../../util/path"
 import { QuartzConfig } from "../../cfg"
 
 describe("Assets Emitter", () => {
@@ -84,7 +84,7 @@ describe("Assets Emitter", () => {
     const ctx = makeMockCtx()
 
     const emitted: string[] = []
-    for await (const dest of plugin.emit(ctx, [], {} as any)) {
+    for await (const dest of plugin.emit(ctx, [], {} as any) as AsyncGenerator<FilePath>) {
       emitted.push(dest)
     }
 
@@ -115,7 +115,7 @@ describe("Assets Emitter", () => {
     const plugin = Assets()
     const ctx = makeMockCtx()
 
-    for await (const _dest of plugin.emit(ctx, [], {} as any)) {}
+    for await (const _dest of plugin.emit(ctx, [], {} as any) as AsyncGenerator<FilePath>) {}
 
     const expectedDest = path.join(outputDir, "notes", "diagram.svg")
     assert.strictEqual(fs.existsSync(expectedDest), true)
@@ -133,7 +133,7 @@ describe("Assets Emitter", () => {
     const plugin = Assets()
     const ctx = makeMockCtx()
 
-    for await (const _dest of plugin.emit(ctx, [], {} as any)) {}
+    for await (const _dest of plugin.emit(ctx, [], {} as any) as AsyncGenerator<FilePath>) {}
 
     assert.strictEqual(fs.existsSync(path.join(outputDir, "private", "assets", "secret.png")), false)
     assert.strictEqual(fs.existsSync(path.join(outputDir, "templates", "template-img.png")), false)
@@ -150,10 +150,11 @@ describe("Assets Emitter", () => {
     const svgContent = '<svg id="1"/>'
     await fs.promises.writeFile(path.join(assetsDir, "chart.svg"), svgContent)
 
-    if (plugin.partialEmit) {
-      for await (const _ of plugin.partialEmit(ctx, [], {} as any, [
+    const partial = plugin.partialEmit
+    if (partial) {
+      for await (const _ of (partial(ctx, [], {} as any, [
         { type: "add", path: "section/assets/chart.svg" as FilePath },
-      ])) {}
+      ]) as AsyncGenerator<FilePath>)) {}
     }
 
     const dest = path.join(outputDir, "section", "assets", "chart.svg")
@@ -164,19 +165,19 @@ describe("Assets Emitter", () => {
     const updatedContent = '<svg id="2"/>'
     await fs.promises.writeFile(path.join(assetsDir, "chart.svg"), updatedContent)
 
-    if (plugin.partialEmit) {
-      for await (const _ of plugin.partialEmit(ctx, [], {} as any, [
+    if (partial) {
+      for await (const _ of (partial(ctx, [], {} as any, [
         { type: "change", path: "section/assets/chart.svg" as FilePath },
-      ])) {}
+      ]) as AsyncGenerator<FilePath>)) {}
     }
     assert.strictEqual(await fs.promises.readFile(dest, "utf8"), updatedContent)
 
     // 3. Delete event
     await fs.promises.unlink(path.join(assetsDir, "chart.svg"))
-    if (plugin.partialEmit) {
-      for await (const _ of plugin.partialEmit(ctx, [], {} as any, [
+    if (partial) {
+      for await (const _ of (partial(ctx, [], {} as any, [
         { type: "delete", path: "section/assets/chart.svg" as FilePath },
-      ])) {}
+      ]) as AsyncGenerator<FilePath>)) {}
     }
     assert.strictEqual(fs.existsSync(dest), false)
   })

@@ -251,8 +251,8 @@ article {
     font-size: 0.96em;
   }
 
-  & blockquote:not(.hero-epigraph) {
-    border-left: 3px solid var(--opal-blue-border);
+  & blockquote:not(.callout):not(.hero-epigraph) {
+    border-left: 2.5px solid var(--opal-blue-soft);
     padding-left: 1.15rem;
     margin-block: 1.5rem 1.6rem;
     margin-inline: 0;
@@ -870,74 +870,187 @@ figure:has(> img) {
 }
 
 // ============================================================================
-// 5. CALLOUT REFINEMENTS (OPALITE SEMANTIC SPECTRUM)
+// 5. CALLOUT REFINEMENTS & SEMANTIC ANNOTATIONS (OPALITE SPECTRUM)
 // ============================================================================
 
 .callout {
   border: 1px solid var(--border-card);
-  border-left: 3.5px solid var(--secondary);
+  border-left: 3px solid var(--color, var(--secondary));
   border-radius: 6px;
-  background-color: var(--highlight);
-  padding: 0.85rem 1.15rem;
-  margin: 1.5rem 0;
+  background-color: color-mix(in srgb, var(--bg, var(--highlight)) 40%, var(--bg-surface));
+  padding: 0.75rem 1.15rem;
+  margin-block: 1.5rem 1.6rem;
+  margin-inline: 0;
   font-size: 0.96rem;
+  box-sizing: border-box;
+  box-shadow: 0 1px 3px rgba(15, 29, 46, 0.03);
+  overflow-y: hidden;
 
   & > .callout-title {
-    font-weight: 650;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0 0 0.45rem 0;
     color: var(--dark);
-    font-size: 0.98rem;
-    margin-bottom: 0.4rem;
-  }
+    font-size: 0.94rem;
+    font-weight: 650;
+    letter-spacing: -0.005em;
+    line-height: 1.4;
+    user-select: none;
 
-  & > .callout-content {
-    color: var(--darkgray);
+    & .callout-icon {
+      width: 17px;
+      height: 17px;
+      flex: 0 0 17px;
+      opacity: 0.9;
+      background-color: var(--color, var(--secondary));
+    }
 
-    & > p:last-child {
-      margin-bottom: 0;
+    & .callout-title-inner {
+      flex: 1;
+
+      & > p {
+        color: inherit;
+        font-weight: inherit;
+        font-size: inherit;
+        margin: 0;
+      }
+    }
+
+    & .fold-callout-icon {
+      width: 16px;
+      height: 16px;
+      flex: 0 0 16px;
+      opacity: 0.65;
+      cursor: pointer;
+      transition:
+        transform 0.18s cubic-bezier(0.16, 1, 0.3, 1),
+        opacity 0.15s ease;
+
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 
-  /* Info: Cyan / Aquamarine */
-  &[data-callout="info"] {
+  & > .callout-content {
+    color: var(--text-body);
+    font-size: 0.96rem;
+    line-height: 1.7;
+
+    & > p {
+      margin-block: 0 0.85rem;
+      line-height: 1.7;
+      color: var(--text-body);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    & > ul,
+    & > ol {
+      margin-block: 0 0.85rem;
+      padding-left: 1.35rem;
+      color: var(--text-body);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // Foldable Collapsed State
+  &.is-collapsed {
+    & > .callout-title {
+      padding-bottom: 0;
+    }
+  }
+
+  // Nested Callouts (Annotation -> Sub-annotation)
+  & .callout {
+    margin-block: 0.9rem;
+    padding: 0.65rem 0.95rem;
+    border-left-width: 2.5px;
+    background-color: color-mix(in srgb, var(--bg, var(--highlight)) 30%, var(--bg-surface));
+    border-color: color-mix(in srgb, var(--border-card) 85%, transparent);
+    box-shadow: none;
+  }
+
+  /* Info / Todo / Abstract: Cyan / Aquamarine */
+  &[data-callout="info"],
+  &[data-callout="todo"],
+  &[data-callout="abstract"] {
+    --color: var(--opal-cyan);
+    --border: var(--opal-cyan-border);
+    --bg: var(--opal-cyan-bg);
     border-left-color: var(--opal-cyan);
-    background-color: var(--opal-cyan-bg);
     border-color: var(--opal-cyan-border);
+    background-color: color-mix(in srgb, var(--opal-cyan-bg) 60%, var(--bg-surface));
   }
 
   /* Note: Blue / Sapphire */
   &[data-callout="note"] {
+    --color: var(--opal-blue);
+    --border: var(--opal-blue-border);
+    --bg: var(--opal-blue-bg);
     border-left-color: var(--opal-blue);
-    background-color: var(--opal-blue-bg);
     border-color: var(--opal-blue-border);
+    background-color: color-mix(in srgb, var(--opal-blue-bg) 60%, var(--bg-surface));
   }
 
   /* Tip / Success: Mint / Emerald */
   &[data-callout="tip"],
   &[data-callout="success"] {
+    --color: var(--opal-mint);
+    --border: var(--opal-mint-border);
+    --bg: var(--opal-mint-bg);
     border-left-color: var(--opal-mint);
-    background-color: var(--opal-mint-bg);
     border-color: var(--opal-mint-border);
+    background-color: color-mix(in srgb, var(--opal-mint-bg) 60%, var(--bg-surface));
   }
 
-  /* Example: Lavender / Amethyst */
-  &[data-callout="example"] {
+  /* Example / Question: Violet / Amethyst */
+  &[data-callout="example"],
+  &[data-callout="question"] {
+    --color: var(--opal-violet);
+    --border: var(--opal-violet-border);
+    --bg: var(--opal-violet-bg);
     border-left-color: var(--opal-violet);
-    background-color: var(--opal-violet-bg);
     border-color: var(--opal-violet-border);
+    background-color: color-mix(in srgb, var(--opal-violet-bg) 60%, var(--bg-surface));
   }
 
   /* Warning: Amber / Topaz */
   &[data-callout="warning"] {
+    --color: var(--opal-amber);
+    --border: var(--opal-amber-border);
+    --bg: var(--opal-amber-bg);
     border-left-color: var(--opal-amber);
-    background-color: var(--opal-amber-bg);
     border-color: var(--opal-amber-border);
+    background-color: color-mix(in srgb, var(--opal-amber-bg) 60%, var(--bg-surface));
   }
 
-  /* Danger: Rose / Morganite */
-  &[data-callout="danger"] {
+  /* Danger / Failure / Bug: Rose / Morganite */
+  &[data-callout="danger"],
+  &[data-callout="failure"],
+  &[data-callout="bug"] {
+    --color: var(--opal-rose);
+    --border: var(--opal-rose-border);
+    --bg: var(--opal-rose-bg);
     border-left-color: var(--opal-rose);
-    background-color: var(--opal-rose-bg);
     border-color: var(--opal-rose-border);
+    background-color: color-mix(in srgb, var(--opal-rose-bg) 60%, var(--bg-surface));
+  }
+
+  /* Quote Callout */
+  &[data-callout="quote"] {
+    --color: var(--secondary);
+    --border: var(--border-card);
+    --bg: color-mix(in srgb, var(--bg-subtle) 40%, var(--bg-surface));
+    border-left-color: var(--secondary);
+    border-color: var(--border-card);
+    background-color: color-mix(in srgb, var(--bg-subtle) 40%, var(--bg-surface));
   }
 
   /* Cards */
@@ -946,6 +1059,71 @@ figure:has(> img) {
     background-color: var(--bg-surface);
     border: 1px solid var(--border-card);
     border-left: 3.5px solid var(--secondary);
+  }
+}
+
+// Dark Mode Overrides for Callouts
+:root[saved-theme="dark"] .callout {
+  background-color: color-mix(in srgb, var(--bg, var(--highlight)) 20%, var(--bg-surface));
+  border-color: var(--border-card);
+  box-shadow: none;
+
+  & > .callout-title {
+    color: var(--dark);
+  }
+
+  & > .callout-content {
+    color: var(--text-body);
+  }
+
+  &[data-callout="info"],
+  &[data-callout="todo"],
+  &[data-callout="abstract"] {
+    background-color: color-mix(in srgb, var(--opal-cyan-bg) 40%, var(--bg-surface));
+    border-color: var(--opal-cyan-border);
+  }
+
+  &[data-callout="note"] {
+    background-color: color-mix(in srgb, var(--opal-blue-bg) 40%, var(--bg-surface));
+    border-color: var(--opal-blue-border);
+  }
+
+  &[data-callout="tip"],
+  &[data-callout="success"] {
+    background-color: color-mix(in srgb, var(--opal-mint-bg) 40%, var(--bg-surface));
+    border-color: var(--opal-mint-border);
+  }
+
+  &[data-callout="example"],
+  &[data-callout="question"] {
+    background-color: color-mix(in srgb, var(--opal-violet-bg) 40%, var(--bg-surface));
+    border-color: var(--opal-violet-border);
+  }
+
+  &[data-callout="warning"] {
+    background-color: color-mix(in srgb, var(--opal-amber-bg) 40%, var(--bg-surface));
+    border-color: var(--opal-amber-border);
+  }
+
+  &[data-callout="danger"],
+  &[data-callout="failure"],
+  &[data-callout="bug"] {
+    background-color: color-mix(in srgb, var(--opal-rose-bg) 40%, var(--bg-surface));
+    border-color: var(--opal-rose-border);
+  }
+
+  &[data-callout="quote"] {
+    background-color: color-mix(in srgb, var(--bg-subtle) 30%, var(--bg-surface));
+    border-color: var(--border-card);
+  }
+
+  &[data-callout="cards"] {
+    background-color: var(--bg-surface);
+    border-color: var(--border-card);
+  }
+
+  & .callout {
+    background-color: color-mix(in srgb, var(--bg, var(--highlight)) 15%, var(--bg-surface));
   }
 }
 
@@ -1491,6 +1669,21 @@ a.folder-card.internal {
       & td {
         padding: 0.48rem 0.65rem;
       }
+    }
+  }
+
+  .callout {
+    padding: 0.65rem 0.9rem;
+    margin-block: 1.25rem;
+    font-size: 0.93rem;
+
+    & > .callout-title {
+      font-size: 0.91rem;
+    }
+
+    & .callout {
+      padding: 0.55rem 0.75rem;
+      margin-block: 0.75rem;
     }
   }
 }

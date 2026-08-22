@@ -182,7 +182,7 @@ describe("CrawlLinks - SVG object[data] Resolution", () => {
 
     // 1. Verify Assets emitter copies the SVG to public/
     const assetsPlugin = Assets()
-    for await (const _ of assetsPlugin.emit(ctx, [], {} as any)) {}
+    for await (const _ of assetsPlugin.emit(ctx, [], {} as any) as AsyncGenerator<FilePath>) {}
 
     const expectedPublicSvg = path.join(
       outputDir,
