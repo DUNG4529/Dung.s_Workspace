@@ -1,6 +1,3 @@
----
-tags: [dashboard, fpt, homepage]
----
 
 # 🏛️ FPT University – Hành trình học tập
 
