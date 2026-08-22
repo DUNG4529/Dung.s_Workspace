@@ -6,13 +6,13 @@
 
 :root {
   /* -------------------------------------------------------------------------
-   * Canvas & Atmospheric Backgrounds (Luminous Morning Paper)
+   * Canvas & Atmospheric Backgrounds (Luminous Blue Morning Paper)
    * ----------------------------------------------------------------------- */
-  --bg-canvas: #f3f8fc;
+  --bg-canvas: #f1f6fb;
   --bg-surface: #ffffff;
   --bg-surface-elevated: #ffffff;
-  --bg-subtle: #ebf3f9;
-  --bg-highlight: rgba(219, 234, 254, 0.45);
+  --bg-subtle: #e8f2fa;
+  --bg-highlight: rgba(219, 234, 254, 0.5);
 
   /* -------------------------------------------------------------------------
    * Typography Hierarchy
@@ -23,7 +23,7 @@
   --text-subtle: #8fa3b8;
 
   /* -------------------------------------------------------------------------
-   * Semantic Mineral Spectrum (Role-Based, Not Subject-Based)
+   * Semantic Mineral Spectrum (Sapphire-Dominant)
    * ----------------------------------------------------------------------- */
   /* Sapphire (Primary Identity, Universal Navigation, Active States, Core Links) */
   --opal-blue: #2563eb;
@@ -65,8 +65,8 @@
   /* -------------------------------------------------------------------------
    * Structural Borders & Dividers
    * ----------------------------------------------------------------------- */
-  --border-card: #dce8f3;
-  --border-divider: #cbdbe8;
+  --border-card: #d8e5f2;
+  --border-divider: #c8d9ea;
 
   /* -------------------------------------------------------------------------
    * Knowledge Graph Constellation
@@ -74,24 +74,24 @@
   --g-node: #3b82f6;
   --g-node-active: #7c3aed;
   --g-node-inactive: #8fa3b8;
-  --g-link: #dce8f3;
+  --g-link: #d8e5f2;
   --g-link-active: #6366f1;
 }
 
 :root[saved-theme="dark"] {
   /* -------------------------------------------------------------------------
-   * Dark Mode (Quiet Midnight Library)
+   * Dark Mode (Quiet Midnight Blue Library)
    * ----------------------------------------------------------------------- */
-  --bg-canvas: #0a1220;
-  --bg-surface: #111b2e;
-  --bg-surface-elevated: #16243d;
-  --bg-subtle: #18253a;
-  --bg-highlight: rgba(30, 58, 138, 0.35);
+  --bg-canvas: #080e18;
+  --bg-surface: #0f1828;
+  --bg-surface-elevated: #152238;
+  --bg-subtle: #132034;
+  --bg-highlight: rgba(30, 58, 138, 0.38);
 
   --text-main: #f0f6fc;
-  --text-body: #d8e6f3;
-  --text-muted: #8fa3b8;
-  --text-subtle: #5a728c;
+  --text-body: #d4e4f4;
+  --text-muted: #889ebd;
+  --text-subtle: #546c8b;
 
   --opal-blue: #60a5fa;
   --opal-blue-hover: #93c5fd;
@@ -124,13 +124,13 @@
   --opal-rose-bg: rgba(76, 5, 25, 0.4);
   --opal-rose-border: #881337;
 
-  --border-card: #18253a;
-  --border-divider: #24354f;
+  --border-card: #182842;
+  --border-divider: #223554;
 
   --g-node: #60a5fa;
   --g-node-active: #c084fc;
   --g-node-inactive: #475569;
-  --g-link: #18253a;
+  --g-link: #182842;
   --g-link-active: #818cf8;
 }
 
@@ -141,10 +141,10 @@
 body {
   background-color: var(--bg-canvas);
   background-image:
-    radial-gradient(at 0% 0%, rgba(219, 234, 254, 0.45) 0px, transparent 58%),
-    radial-gradient(at 100% 0%, rgba(237, 233, 254, 0.38) 0px, transparent 52%),
-    radial-gradient(at 50% 100%, rgba(207, 250, 254, 0.3) 0px, transparent 62%),
-    radial-gradient(at 50% 30%, rgba(255, 255, 255, 0.7) 0px, transparent 70%);
+    radial-gradient(ellipse at 15% 0%, rgba(37, 99, 235, 0.07) 0%, transparent 65%),
+    radial-gradient(ellipse at 85% 5%, rgba(8, 145, 178, 0.055) 0%, transparent 60%),
+    radial-gradient(ellipse at 50% 100%, rgba(56, 189, 248, 0.045) 0%, transparent 70%),
+    radial-gradient(ellipse at 50% 30%, rgba(255, 255, 255, 0.75) 0%, transparent 75%);
   background-attachment: fixed;
   color: var(--darkgray);
   font-family: var(--bodyFont);
@@ -152,14 +152,36 @@ body {
   letter-spacing: 0.005em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  min-height: 100vh;
+
+  /* Layer 3 — Ultra-Subtle Static Tactile Material Texture */
+  &::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.022;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+  }
 }
 
 :root[saved-theme="dark"] body {
   background-image:
-    radial-gradient(at 0% 0%, rgba(30, 58, 138, 0.25) 0px, transparent 58%),
-    radial-gradient(at 100% 0%, rgba(88, 28, 135, 0.2) 0px, transparent 52%),
-    radial-gradient(at 50% 100%, rgba(8, 145, 178, 0.16) 0px, transparent 62%),
-    radial-gradient(at 50% 30%, rgba(17, 27, 46, 0.6) 0px, transparent 70%);
+    radial-gradient(ellipse at 15% 0%, rgba(37, 99, 235, 0.13) 0%, transparent 65%),
+    radial-gradient(ellipse at 85% 5%, rgba(8, 145, 178, 0.09) 0%, transparent 60%),
+    radial-gradient(ellipse at 50% 100%, rgba(2, 132, 199, 0.07) 0%, transparent 70%),
+    radial-gradient(ellipse at 50% 35%, rgba(15, 24, 40, 0.45) 0%, transparent 75%);
+
+  &::before {
+    opacity: 0.032;
+    mix-blend-mode: overlay;
+  }
 }
 
 article {
