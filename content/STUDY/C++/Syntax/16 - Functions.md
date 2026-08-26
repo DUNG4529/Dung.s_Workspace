@@ -60,7 +60,7 @@ By default, C++ passes arguments **by value**—meaning the function receives a 
 ---
 
 ## 5. Examples
-
+ 
 ### Example 1: Basic Arithmetic Function
 ```cpp
 #include <iostream>
