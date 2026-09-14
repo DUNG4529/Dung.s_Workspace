@@ -5,23 +5,6 @@ title: Dũng's Workspace
 
 > _Learn deeply. Write clearly. Cultivate continuously._
 
----
-
-## 📚 Library
-
-- 🎓 [[fpt-university|FPT University]]
-    
-- 💻 [[projects|Projects]]
-    
-- 🔬 [[research|Research]]
-    
-- 📐 [[mathematics|Mathematics]]
-    
-- 📚 [[books|Books]]
-    
-
----
-
 ## 🧭 Quick Access
 
 - 🔎 Search — `Ctrl + K`
